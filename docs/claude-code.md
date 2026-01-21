@@ -537,7 +537,83 @@ claude
 
 ## 7. 실용적 팁
 
-### 효율적인 프롬프트
+### 7.1 Boris Cherny의 프로 팁 (Claude Code 창시자)
+
+> 출처: [How Boris Uses Claude Code](https://howborisusesclaudecode.com/)
+> "설정은 놀랍도록 기본적. Claude Code는 별다른 커스터마이징 없이도 잘 동작함."
+
+#### 핵심 워크플로우
+
+**1. 5개 병렬 세션 운영**
+```bash
+# 터미널 탭 1-5: 동일 저장소의 독립적인 git checkout
+# 시스템 알림으로 입력 필요 시점 감지
+# + claude.ai/code에서 5-10개 추가 세션
+```
+
+**2. Plan 모드로 시작 (shift+tab 2번)**
+```
+Plan 모드 → 계획 정제 → 자동 수락 모드 → 단일 패스 실행
+```
+> Claude가 대부분 1-shot으로 해결
+
+**3. Opus 4.5 + Thinking 고정**
+> "더 크고 느리지만, 지시를 덜 해도 되고 도구 사용이 좋아서 결국 더 빠름"
+
+**4. 팀 공유 CLAUDE.md**
+```markdown
+# Git에 체크인, 팀 전체가 주간 업데이트
+# Claude가 실수하면 → CLAUDE.md에 추가 → 반복 방지
+```
+
+**5. 슬래시 명령어로 자동화**
+```bash
+# .claude/commands/commit-push-pr.md
+# → 하루 수십 번 실행
+
+# 인라인 bash로 컨텍스트 사전 계산 (git status 등)
+# → 모델과의 왕복 최소화
+```
+
+**6. PostToolUse 훅으로 자동 포맷**
+```json
+{
+  "PostToolUse": [{
+    "matcher": "Edit|Write",
+    "hooks": [{"type": "command", "command": "bun run format"}]
+  }]
+}
+```
+> Claude 코드의 마지막 10% 포맷 문제 해결 → CI 실패 방지
+
+**7. /permissions로 안전하게 권한 관리**
+```
+--dangerously-skip-permissions 대신 /permissions 사용
+→ 팀 자산으로 공유, 리뷰, 버전 관리
+```
+
+#### 가장 중요한 팁: 검증 피드백 루프
+
+> **"Claude에게 작업 검증 방법을 제공하면 최종 결과 품질이 2-3배 향상"**
+
+| 도메인 | 검증 방법 |
+|--------|-----------|
+| 백엔드 | 테스트 스위트 실행 |
+| 프론트엔드 | 브라우저에서 확인 |
+| 모바일 | 시뮬레이터 테스트 |
+| CLI | bash 명령어 실행 |
+
+```markdown
+# CLAUDE.md 예시
+## 검증
+- 모든 변경 후 `npm test` 실행
+- UI 변경 시 `npm run dev`로 브라우저 확인
+- API 변경 시 `curl` 테스트
+```
+
+---
+
+### 7.2 효율적인 프롬프트
 
 #### ultrathink / think hard
 깊은 사고가 필요할 때:
@@ -550,7 +626,7 @@ ultrathink: 이 아키텍처의 문제점을 분석해줘
 /compact    # 컨텍스트 압축
 ```
 
-### 병렬 작업
+### 7.3 병렬 작업
 
 #### Git Worktree 활용
 ```bash
@@ -563,15 +639,23 @@ cd ../feature-auth && claude
 cd ../feature-api && claude
 ```
 
-### 비용 최적화
+#### Claude Squad로 멀티 에이전트
+```bash
+brew install claude-squad
+cs  # 여러 에이전트 동시 관리
+```
 
-| 작업 유형 | 권장 모델 |
-|-----------|-----------|
-| 간단한 수정 | Haiku |
-| 일반 개발 | Sonnet |
-| 복잡한 설계 | Opus |
+### 7.4 비용 최적화
 
-### 자주 쓰는 패턴
+| 작업 유형 | 권장 모델 | Boris의 선택 |
+|-----------|-----------|--------------|
+| 간단한 수정 | Haiku | - |
+| 일반 개발 | Sonnet | - |
+| 복잡한 설계 | Opus | **Opus 4.5 고정** |
+
+> Boris: "Opus가 결국 더 빠름" (지시 횟수 감소)
+
+### 7.5 자주 쓰는 패턴
 
 #### 1. 코드 리뷰 요청
 ```
@@ -642,6 +726,7 @@ claude mcp add [name] ...
 - [Anthropic Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices)
 
 ### 가이드
+- [How Boris Uses Claude Code](https://howborisusesclaudecode.com/) - 창시자의 워크플로우 ⭐
 - [Writing a good CLAUDE.md](https://www.humanlayer.dev/blog/writing-a-good-claude-md)
 - [Complete Guide to CLAUDE.md](https://www.builder.io/blog/claude-md-guide)
 
