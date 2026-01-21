@@ -302,29 +302,65 @@ Hooks는 Claude 동작 시점에 실행되는 사용자 정의 스크립트.
 
 ## 6. 플러그인 & 확장
 
-### 메모리/컨텍스트
+> **플러그인 레지스트리**: [claude-plugins.dev](https://claude-plugins.dev) - 11,989개 플러그인, 63,065개 스킬
 
-#### claude-mem
-세션 간 컨텍스트 유지. ChromaDB 벡터 저장.
+### 6.1 공식 & 핵심 (10K+ Stars)
+
+| 플러그인 | Stars | 설명 |
+|----------|-------|------|
+| **[skills](https://github.com/anthropics/skills)** | 37.5K | 공식 에이전트 스킬 저장소 |
+| **[agents](https://github.com/wshobson/agents)** | 25K | 프로덕션 서브에이전트 모음 |
+| **[SuperClaude](https://github.com/SuperClaude-Org/SuperClaude_Framework)** | 20K | 16 페르소나, 30 명령어 프레임워크 |
+| **[claudia](https://github.com/marcusbey/claudia)** | 19.9K | GUI 앱 & 에이전트 관리 도구 |
+| **[vibe-kanban](https://github.com/)** | 14.7K | 칸반 보드 인터페이스 |
+| **[claude-mem](https://github.com/thedotmack/claude-mem)** | 13.1K | 세션 간 메모리 유지 (ChromaDB) |
+| **[Claude-Flow](https://github.com/ruvnet/claude-flow)** | 11.4K | 멀티 에이전트 스웜 오케스트레이션 |
+| **[zen-mcp-server](https://github.com/)** | 10.8K | 다중 모델 통합 MCP |
+
+### 6.2 에이전트 오케스트레이션 (1K+ Stars)
+
+#### Claude-Flow
+멀티 에이전트 스웜 플랫폼. 54+ 전문 에이전트 배포.
 
 ```bash
 # 설치
-npm install -g claude-mem
+npm install -g claude-flow
 
-# 사용
-claude-mem init
+# 실행
+claude-flow init
 ```
 
 **특징:**
-- 자동 대화 압축
-- 시작 시 관련 컨텍스트 로드
-- 시맨틱 검색
+- 분산 스웜 인텔리전스
+- RAG 통합
+- 공유 메모리 & 합의 시스템
+- 500K+ 다운로드, 100K 월간 사용자
 
-**링크:** [github.com/thedotmack/claude-mem](https://github.com/thedotmack/claude-mem)
+**링크:** [github.com/ruvnet/claude-flow](https://github.com/ruvnet/claude-flow)
 
-### 오케스트레이터
+---
 
-#### SuperClaude (19K+ stars)
+#### Claude-Squad (5.6K Stars)
+여러 AI 에이전트 동시 관리 (Claude Code, Aider, Codex, OpenCode, Amp).
+
+```bash
+# 설치
+brew install claude-squad
+
+# 실행 (cs 명령어)
+cs
+```
+
+**특징:**
+- tmux 기반 격리된 터미널 세션
+- git worktree로 브랜치 분리
+- 백그라운드 작업 (yolo/auto-accept 모드)
+
+**링크:** [github.com/smtg-ai/claude-squad](https://github.com/smtg-ai/claude-squad)
+
+---
+
+#### SuperClaude (20K Stars)
 16개 페르소나, 30개 명령어.
 
 ```bash
@@ -365,20 +401,137 @@ npm install -g oh-my-claude-sisyphus
 
 **링크:** [github.com/Yeachan-Heo/oh-my-claude-sisyphus](https://github.com/Yeachan-Heo/oh-my-claude-sisyphus)
 
-### IDE 통합
+### 6.3 GUI 클라이언트
 
-| 도구 | IDE | Stars |
-|------|-----|-------|
-| [claudecode.nvim](https://github.com/greggh/claude-code.nvim) | Neovim | 1.7K |
-| [claude-code-chat](https://github.com/) | VS Code | 968 |
-| [claude-code-ide.el](https://github.com/) | Emacs | 1.2K |
+#### Claudia (19.9K Stars)
+터미널이 익숙하지 않은 사용자를 위한 데스크톱 앱.
 
-### 모니터링
+```bash
+# macOS
+brew install --cask claudia
 
-| 도구 | 용도 |
-|------|------|
-| **CCFlare** | 웹 UI 대시보드, 토큰 소비 추적 |
-| **CC Usage** | 로컬 로그 기반 분석 |
+# 또는 GitHub Releases에서 다운로드
+```
+
+**특징:**
+- Tauri 2 기반 네이티브 앱
+- 커스텀 에이전트 생성
+- 세션 관리 & 사용량 추적
+- 백그라운드 에이전트 실행
+
+**링크:** [github.com/marcusbey/claudia](https://github.com/marcusbey/claudia)
+
+#### 기타 GUI
+| 도구 | Stars | 설명 |
+|------|-------|------|
+| **happy** | 7K | 모바일/웹 클라이언트 |
+| **claudecodeui** | 5.4K | 데스크톱/모바일 UI |
+
+### 6.4 사용량 모니터링
+
+#### ccusage (9.7K Stars)
+로컬 JSONL 로그 분석 CLI.
+
+```bash
+# 설치 불필요, npx로 바로 실행
+npx ccusage daily     # 일별 사용량
+npx ccusage monthly   # 월별 집계
+npx ccusage session   # 세션별 분석
+npx ccusage blocks    # 5시간 빌링 윈도우
+```
+
+**링크:** [github.com/ryoppippi/ccusage](https://github.com/ryoppippi/ccusage)
+
+#### Claude-Code-Usage-Monitor (6.1K Stars)
+실시간 터미널 모니터링 + ML 예측.
+
+```bash
+pip install claude-monitor
+claude-monitor  # 또는 cmonitor, ccmonitor
+```
+
+**특징:**
+- Rich UI 프로그레스 바
+- 플랜 자동 감지 (Pro 44K, Max5 88K, Max20 220K)
+- 다단계 경고 시스템
+
+**링크:** [github.com/Maciek-roboblog/Claude-Code-Usage-Monitor](https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor)
+
+#### 기타 모니터링
+| 도구 | 플랫폼 | 설명 |
+|------|--------|------|
+| **ccusage-vscode** | VS Code | 상태바에 사용량 표시 |
+| **ccusage Raycast** | Raycast | macOS 빠른 조회 |
+
+### 6.5 개발 워크플로우
+
+#### TDD Guard (1.7K Stars)
+TDD 원칙 자동 강제.
+
+```bash
+# Claude Code에서 /hooks로 설정
+# matcher: Write|Edit|MultiEdit|TodoWrite
+# hook: tdd-guard
+```
+
+**차단 규칙:**
+- 실패하는 테스트 없이 구현 금지
+- 테스트 요구사항 초과 구현 금지
+- 동시에 여러 테스트 추가 금지
+
+#### Continuous-Claude-v2 (2.2K Stars)
+컨텍스트 관리 & 에이전트 오케스트레이션.
+
+**특징:**
+- 훅으로 상태 유지 (ledger & handoff)
+- MCP 실행 시 컨텍스트 오염 방지
+- 격리된 컨텍스트 윈도우
+
+#### cc-sessions (1.5K Stars)
+개발 세션 추적 & git 관리.
+
+```bash
+npm install -g cc-sessions
+```
+
+### 6.6 IDE 통합
+
+| 도구 | IDE | Stars | 특징 |
+|------|-----|-------|------|
+| **[claudecode.nvim](https://github.com/greggh/claude-code.nvim)** | Neovim | 1.7K | 완전 통합 |
+| **[claude-code-ide.el](https://github.com/)** | Emacs | 1.2K | MCP 네이티브 |
+| **[claude-code-chat](https://github.com/)** | VS Code | 968 | 채팅 인터페이스 |
+
+### 6.7 유틸리티 & 기타
+
+| 도구 | Stars | 설명 |
+|------|-------|------|
+| **claude-code-prompt-improver** | 1K | 프롬프트 자동 개선 훅 |
+| **Claude-Code-Remote** | 943 | 이메일로 원격 제어 |
+| **claude-code-hooks-multi-agent-observability** | 893 | 멀티 에이전트 실시간 모니터링 |
+| **claude-code-proxy** | 2.8K | OpenAI 모델 지원 프록시 |
+| **claude-code-templates** | 15.4K | 100+ 에이전트/명령어 템플릿 |
+
+### 6.8 플러그인 설치 방법
+
+```bash
+# 마켓플레이스에서 설치
+claude
+> /plugin install [plugin-name]
+
+# 또는 settings.json에 직접 추가
+# .claude/settings.json
+```
+
+### 6.9 플러그인 디스커버리
+
+| 리소스 | URL | 설명 |
+|--------|-----|------|
+| **공식 디렉토리** | `/plugin list` | Claude Code 내장 |
+| **claude-plugins.dev** | [링크](https://claude-plugins.dev) | 11,989 플러그인 레지스트리 |
+| **SkillsMP** | [skillsmp.com](https://skillsmp.com) | 71K+ 스킬 마켓플레이스 |
+| **awesome-claude-code** | [GitHub](https://github.com/hesreallyhim/awesome-claude-code) | 21K+ 커뮤니티 큐레이션 |
+| **ccplugins marketplace** | [GitHub](https://github.com/ccplugins/marketplace) | 243개 검증된 플러그인 |
 
 ---
 
