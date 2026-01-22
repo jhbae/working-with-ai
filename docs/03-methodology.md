@@ -193,7 +193,7 @@ Step 1: 탐색 (코딩 금지)
   → 복잡하면 서브에이전트 활용
 
 Step 2: 계획 수립
-  → "think", "think hard", "ultrathink"로 사고 깊이 조절
+  → Thinking mode 활용 (TAB으로 토글, 기본 활성화)
   → 계획 문서화 후 검토
 
 Step 3: 구현

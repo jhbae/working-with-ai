@@ -692,11 +692,18 @@ Plan 모드 → 계획 정제 → 자동 수락 모드 → 단일 패스 실행
 
 ### 7.2 효율적인 프롬프트
 
-#### ultrathink / think hard
-깊은 사고가 필요할 때:
+#### Thinking Mode (2026년 1월~)
+> `ultrathink`, `think hard`, `think` 키워드는 **deprecated** (2026-01-16)
+> 이제 thinking mode가 기본 활성화 (31,999 토큰)
+
 ```
-ultrathink: 이 아키텍처의 문제점을 분석해줘
+TAB 키로 thinking mode on/off 토글
 ```
+
+| 이전 (v1) | 현재 (v2+) |
+|-----------|-----------|
+| think, think hard, ultrathink | TAB으로 토글 |
+| 키워드로 사고 깊이 조절 | 기본 max 토큰 |
 
 #### 컨텍스트 제한 시
 ```
