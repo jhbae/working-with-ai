@@ -11,7 +11,7 @@
 | 도구 | Stars | 제공자 | 특징 |
 |------|-------|--------|------|
 | **[Claude Code](https://claude.ai/code)** | 55K+ | Anthropic | 200K 컨텍스트, 멀티파일, MCP 지원 → [상세 가이드](04-claude-code.md) |
-| **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** | 50K+ | Google | Conductor, 컨텍스트 기반, 무료 티어 |
+| **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** | 50K+ | Google | 컨텍스트 파일 기반 개발, 무료 티어 |
 | **[Codex CLI](https://github.com/openai/codex)** | 15K+ | OpenAI | GPT-4.1, 샌드박스 실행 |
 
 #### Claude Code

@@ -47,6 +47,7 @@ cd ../feature-api && claude
 | **[moai-adk](https://github.com/modu-ai/moai-adk)** | 활발 | SPEC-First DDD, 한국어 |
 | **[Claude-Flow](https://github.com/ruvnet/claude-flow)** | 11K+ | 멀티 에이전트 스웜 |
 | **[Claude-Squad](https://github.com/smtg-ai/claude-squad)** | 5.6K | 여러 에이전트 동시 관리 |
+| **[Conductor](https://conductor.build)** | - | macOS 앱, Claude Code+Codex 병렬, Git Worktree 자동화 |
 
 ---
 
@@ -193,6 +194,27 @@ cs  # 실행
 - tmux 기반 격리된 터미널 세션
 - git worktree로 브랜치 분리
 - 백그라운드 작업 (yolo/auto-accept 모드)
+
+---
+
+## 8. Conductor (conductor.build)
+
+macOS용 멀티 에이전트 오케스트레이터.
+
+> [conductor.build](https://conductor.build)
+
+### 특징
+- Claude Code + Codex 에이전트 병렬 실행
+- Git Worktree 자동 관리
+- 실시간 진행 상황 대시보드
+- 코드 리뷰 & 머지 UI
+- 기존 Claude Code 인증 사용 (API 키 또는 Pro/Max 구독)
+
+### Gemini CLI "Conductor"와 다름
+| 구분 | Gemini CLI Conductor | conductor.build |
+|------|---------------------|-----------------|
+| 유형 | Gemini CLI 내장 기능 | macOS 독립 앱 |
+| 용도 | 컨텍스트 파일 관리 | 멀티 에이전트 오케스트레이션 |
 
 ---
 
