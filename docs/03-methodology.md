@@ -220,6 +220,7 @@ claude -p "프롬프트" --output-format stream-json
 
 > 출처: [Awesome Agentic Patterns](https://github.com/nibzard/awesome-agentic-patterns) (2.8K stars)
 > 웹사이트: [agentic-patterns.com](https://agentic-patterns.com)
+> 참고: [500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) - 500+ 에이전트 프로젝트 모음
 
 프로덕션 환경에서 검증된 **8개 카테고리, 130+ 패턴** 모음.
 
