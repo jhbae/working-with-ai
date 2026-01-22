@@ -121,17 +121,77 @@ claude mcp get github
 claude mcp remove github
 ```
 
-### 인기 MCP 서버
+### 인기 MCP 서버 (카테고리별)
 
+#### 공식 & 필수
 | 서버 | 용도 | 설치 |
 |------|------|------|
 | **filesystem** | 로컬 파일 접근 | `@modelcontextprotocol/server-filesystem` |
-| **[GitHub MCP](https://github.com/github/github-mcp-server)** | PR, 이슈, CI/CD | GitHub 공식 |
-| **[Desktop Commander](https://github.com/wonderwhy-er/DesktopCommanderMCP)** | 터미널 + 파일 편집 | 커뮤니티 |
-| **Sequential Thinking** | 구조화된 문제 해결 | 커뮤니티 |
-| **postgres/mysql** | DB 쿼리 | 각 DB별 |
+| **[GitHub MCP](https://github.com/github/github-mcp-server)** | PR, 이슈, CI/CD | GitHub 공식 (3.2K stars) |
+| **memory** | 지식 그래프 기반 메모리 | `@modelcontextprotocol/server-memory` |
+| **fetch** | 웹 콘텐츠 가져오기 | 공식 |
 
-### 설정 파일 예시
+#### 디자인 & UI
+| 서버 | 용도 | 설치 |
+|------|------|------|
+| **[Figma MCP](https://mcp.figma.com)** | 디자인→코드 변환 | `claude mcp add --transport http figma https://mcp.figma.com/mcp` |
+| **[claude-talk-to-figma](https://github.com/arinspunk/claude-talk-to-figma-mcp)** | 양방향 Figma 제어 | 커뮤니티 |
+
+#### 브라우저 자동화
+| 서버 | 용도 | 설치 |
+|------|------|------|
+| **[Playwright MCP](https://github.com/microsoft/playwright-mcp)** | 브라우저 자동화 (Microsoft 공식) | `@playwright/mcp` |
+| **[Browserbase](https://github.com/browserbase/mcp-server-browserbase)** | 클라우드 브라우저 + Stagehand | `@browserbasehq/mcp` |
+| **Puppeteer** | Chromium 자동화 | 커뮤니티 |
+
+#### 데이터베이스
+| 서버 | 용도 | 설치 |
+|------|------|------|
+| **[Supabase MCP](https://github.com/supabase-community/supabase-mcp)** | Supabase/Postgres RLS 인식 | `@supabase/mcp` |
+| **PostgreSQL** | 직접 DB 쿼리 | 여러 구현 |
+| **SQLite** | 로컬 DB 분석 | 공식 |
+
+#### 검색 & AI
+| 서버 | 용도 | 설치 |
+|------|------|------|
+| **[Perplexity MCP](https://github.com/perplexityai/modelcontextprotocol)** | 실시간 웹 검색 + AI | 공식 |
+| **[Brave Search](https://github.com/anthropics/brave-search-mcp)** | 프라이버시 중심 검색 | 공식 |
+| **[Exa](https://exa.ai)** | 시맨틱 검색 | 커뮤니티 |
+| **[Context7](https://github.com/)** | 라이브러리 문서 검색 | 커뮤니티 |
+
+#### 프로젝트 관리
+| 서버 | 용도 | 설치 |
+|------|------|------|
+| **[Linear MCP](https://linear.app)** | 이슈 트래킹, 프로젝트 관리 | 공식 |
+| **[Jira/Confluence](https://github.com/atlassian)** | Atlassian 통합 | Atlassian |
+| **[Notion MCP](https://github.com/)** | Notion 워크스페이스 검색 | 커뮤니티 |
+
+#### 커뮤니케이션
+| 서버 | 용도 | 설치 |
+|------|------|------|
+| **[Slack MCP](https://github.com/)** | 채널 읽기, 메시지 전송 | 커뮤니티 |
+
+#### 모니터링 & DevOps
+| 서버 | 용도 | 설치 |
+|------|------|------|
+| **[Sentry MCP](https://github.com/)** | 에러 분석, 스택트레이스 | CLI 래퍼 |
+| **[Desktop Commander](https://github.com/wonderwhy-er/DesktopCommanderMCP)** | 터미널 + 파일 편집 | 커뮤니티 |
+
+#### 통합 서버
+| 서버 | 용도 | 설치 |
+|------|------|------|
+| **[Rube](https://github.com/)** | 500+ 앱 연결 (Gmail, Slack, GitHub...) | 커뮤니티 |
+| **[Pipedream](https://pipedream.com)** | 2,500 API + 8,000 도구 | 상용 |
+| **[mcp-omnisearch](https://github.com/spences10/mcp-omnisearch)** | Tavily, Brave, Perplexity 통합 | 커뮤니티 |
+
+### 설정 예시
+
+#### Figma MCP 추가
+```bash
+claude mcp add --transport http figma https://mcp.figma.com/mcp
+```
+
+#### 설정 파일 예시
 ```json
 // ~/.claude/mcp.json
 {
@@ -143,13 +203,30 @@ claude mcp remove github
     "github": {
       "command": "gh",
       "args": ["mcp"]
+    },
+    "supabase": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp"],
+      "env": {
+        "SUPABASE_URL": "your-url",
+        "SUPABASE_KEY": "your-key"
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp"]
     }
   }
 }
 ```
 
-### Docker MCP Toolkit
-220+ MCP 서버 카탈로그 제공: [Docker MCP Toolkit](https://www.docker.com/blog/add-mcp-servers-to-claude-code-with-mcp-toolkit/)
+### MCP 디렉토리
+| 리소스 | URL | 설명 |
+|--------|-----|------|
+| **mcp.so** | [mcp.so](https://mcp.so) | 3,000+ 서버 인덱스 |
+| **mcp-awesome.com** | [mcp-awesome.com](https://mcp-awesome.com) | 1,200+ 검증된 서버 |
+| **Docker MCP Toolkit** | [링크](https://www.docker.com/blog/add-mcp-servers-to-claude-code-with-mcp-toolkit/) | 220+ 서버 카탈로그 |
+| **공식 서버** | [github.com/modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) | Anthropic 공식 |
 
 ---
 
