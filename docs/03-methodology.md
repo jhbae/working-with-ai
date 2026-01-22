@@ -265,6 +265,92 @@ claude -p "프롬프트" --output-format stream-json
 
 ---
 
+## 8. Ralph Loop (자율 반복 패턴)
+
+> "Ralph는 Bash 루프다" - Geoffrey Huntley
+> 이름 유래: 심슨의 Ralph Wiggum - 항상 실수하지만 절대 멈추지 않는다
+
+### 핵심 개념
+
+PRD의 모든 항목이 완료될 때까지 AI 에이전트를 **반복 실행**하는 패턴.
+
+```
+while (not complete) {
+  1. Fresh context로 에이전트 시작
+  2. 작업 시도
+  3. 완료 태그 체크 (<promise>COMPLETE</promise>)
+  4. 미완료 시 → 피드백과 함께 재시작
+}
+```
+
+### 왜 Fresh Context인가?
+
+| 문제 | Ralph 해결책 |
+|------|-------------|
+| 컨텍스트 누적 오염 | 매 반복 fresh start |
+| 실패 히스토리 노이즈 | git이 memory layer |
+| 컨텍스트 윈도우 한계 | 작은 단위 PRD |
+
+### 구현 방식
+
+```bash
+# 기본 Ralph Loop (개념)
+while true; do
+  claude -p "PRD.md 기반으로 작업 진행" --output-format json
+
+  # 완료 체크
+  if grep -q "COMPLETE" output.json; then
+    break
+  fi
+
+  # 피드백 수집 후 재시작
+  git diff > feedback.txt
+done
+```
+
+### PRD 구조 예시
+```markdown
+# PRD: 사용자 인증 기능
+
+## Stories
+- [ ] 로그인 폼 구현
+- [ ] JWT 토큰 발급
+- [ ] 세션 관리
+
+## 완료 조건
+- 모든 테스트 통과
+- 린트 에러 없음
+```
+
+### 실전 팁
+
+| 팁 | 설명 |
+|----|------|
+| **작은 PRD** | 한 컨텍스트 윈도우에서 완료 가능한 크기 |
+| **AGENTS.md 활용** | 매 반복 후 학습 내용 기록 → 다음 반복에 반영 |
+| **테스트 주도** | 완료 조건을 테스트로 명확하게 정의 |
+| **git이 메모리** | 상태는 파일로, 히스토리는 git으로 |
+
+### 구현체 & 참고자료
+
+| 리소스 | 설명 |
+|--------|------|
+| [ghuntley.com/loop](https://ghuntley.com/loop/) | Geoffrey Huntley 원본 글 |
+| [ralph-playbook](https://github.com/ClaytonFarr/ralph-playbook) | 종합 가이드 |
+| [snarktank/ralph](https://github.com/snarktank/ralph) | PRD 기반 자율 루프 |
+| [vercel-labs/ralph-loop-agent](https://github.com/vercel-labs/ralph-loop-agent) | AI SDK 호환 구현 |
+| [Goose Ralph Loop 튜토리얼](https://block.github.io/goose/docs/tutorials/ralph-loop/) | Goose에서 Ralph 사용법 |
+| [Awesome Claude - Ralph](https://awesomeclaude.ai/ralph-wiggum) | Claude Code용 가이드 |
+
+### 실제 사례
+
+> Cursor CLI + Replica MCP로 Fruit Ninja 클론 제작
+> - 8번의 컨텍스트 로테이션
+> - 캔버스 렌더링 여러 번 실패 후 학습
+> - ~1시간 만에 완성, 인간 개입 0
+
+---
+
 ## 다음 문서
 
 - [04-claude-code.md](04-claude-code.md) - Claude Code 상세
