@@ -270,6 +270,14 @@ claude -p "프롬프트" --output-format stream-json
 > "Ralph는 Bash 루프다" - Geoffrey Huntley
 > 이름 유래: 심슨의 Ralph Wiggum - 항상 실수하지만 절대 멈추지 않는다
 
+**참고**: Ralph Loop은 **패턴/기법**이고, [Sisyphus](05-parallel.md#4-oh-my-claude-sisyphus)는 이 패턴을 포함한 **풀 오케스트레이터**입니다.
+
+| Ralph Loop | Sisyphus |
+|-----------|----------|
+| 단순 반복 패턴 | 멀티 에이전트 오케스트레이터 |
+| 단일 에이전트 루프 | 모델 라우팅 (Opus→Sonnet→Haiku) |
+| bash while 수준 | LSP, AST, 병렬 태스크 활용 |
+
 ### 핵심 개념
 
 PRD의 모든 항목이 완료될 때까지 AI 에이전트를 **반복 실행**하는 패턴.
