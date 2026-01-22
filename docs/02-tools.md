@@ -89,6 +89,7 @@
 |------|-------|------|
 | **[GPT Engineer](https://github.com/gpt-engineer-org/gpt-engineer)** | 55K+ | 전체 코드베이스 생성 |
 | **[MetaGPT](https://github.com/geekan/MetaGPT)** | 50K+ | 멀티 에이전트, PRD→코드 |
+| **[Goose](https://github.com/block/goose)** | 활발 | Block(Square) 제작, MCP 지원, Rust 기반, 데스크톱+CLI |
 | **[Devika](https://github.com/stitionai/devika)** | 20K+ | Devin 대안, 웹 리서치 + 코딩 |
 | **[SWE-agent](https://github.com/SWE-agent/SWE-agent)** | 15K+ | SWE-bench SOTA, NeurIPS 2024 |
 | **[Smol Developer](https://github.com/smol-ai/developer)** | 12K+ | 경량 프로토타입 에이전트 |

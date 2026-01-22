@@ -56,6 +56,7 @@
 - [Devika](https://github.com/stitionai/devika) (20K+ stars)
 - [GPT Engineer](https://github.com/gpt-engineer-org/gpt-engineer) (55K+ stars)
 - [MetaGPT](https://github.com/geekan/MetaGPT) (50K+ stars)
+- [Goose](https://github.com/block/goose) - Block(Square) 제작, MCP 지원
 - [Aider](https://github.com/paul-gauthier/aider) (25K+ stars)
 - [Cline](https://github.com/cline/cline) (40K+ stars)
 - [Plandex](https://github.com/plandex-ai/plandex)
