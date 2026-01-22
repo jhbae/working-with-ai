@@ -418,6 +418,8 @@ Sisyphus (Opus) - 오케스트레이터
 | 도구 | Stars | 분류 | 특징 |
 |------|-------|------|------|
 | **Claude Code** | 55K+ | CLI 에이전트 | Anthropic 공식, 200K 컨텍스트, 멀티파일 → [상세 가이드](docs/claude-code.md) |
+| **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** | 50K+ | CLI 에이전트 | Google 공식, Conductor로 컨텍스트 기반 개발, 무료 티어 |
+| **[Codex CLI](https://github.com/openai/codex)** | 15K+ | CLI 에이전트 | OpenAI 공식, GPT-4.1 기반, 샌드박스 실행 |
 | **[Amp Code](https://ampcode.com)** | - | CLI/IDE | Sourcegraph, 멀티모델(Opus/GPT-5.2), Claude Skills 호환 |
 | **GitHub Copilot** | - | IDE 통합 | 68% 채택률, Agent Mode, MCP 지원 |
 | **Cursor** | - | IDE | Copilot fork, 벡터 기반 이해, 체크포인트 |
