@@ -16,15 +16,16 @@ AI 기반 개발 도구와 방법론에 대한 종합 가이드 문서 프로젝
 ## File Structure
 ```
 ai-dev-guide/
+├── README.md              # 프로젝트 소개
 ├── CLAUDE.md              # 프로젝트 설정
-├── PLAN.md                # 문서 작성 계획
 ├── docs/
-│   ├── 01-overview.md     # 개요 및 현황
-│   ├── 02-tools.md        # 도구 비교
-│   ├── 03-setup.md        # 설정 가이드
-│   ├── 04-methodology.md  # 개발 방법론
-│   ├── 05-parallel.md     # 병렬 작업 & 페르소나
-│   └── 06-spec-driven.md  # 스펙 기반 개발
+│   ├── README.md          # 빠른 시작 & 권장사항
+│   ├── 01-overview.md     # 현황, 채택률, 분류
+│   ├── 02-tools.md        # 도구 종합 비교
+│   ├── 03-methodology.md  # 개발 방법론
+│   ├── 04-claude-code.md  # Claude Code 완전 가이드
+│   ├── 05-parallel.md     # 병렬 작업 & 오케스트레이션
+│   └── references.md      # 참고 자료
 └── examples/              # 예제 설정 파일
 ```
 
