@@ -116,4 +116,117 @@
 
 ---
 
-*마지막 업데이트: 2026-01-22*
+## 영향력자 & 정보 소스
+
+### 전도사/인플루언서
+
+| 인물 | 팔로우 | 핵심 기여 |
+|------|--------|----------|
+| **Andrej Karpathy** | [@karpathy](https://x.com/karpathy) | "Vibe Coding" 창시, AI 교육 콘텐츠 |
+| **Swyx (Shawn Wang)** | [@swyx](https://x.com/swyx) | "AI Engineer" 개념, Latent Space 팟캐스트 |
+| **Rowan Cheung** | [@rowancheung](https://x.com/rowancheung) | The Rundown AI (175만 구독) |
+| **Logan Kilpatrick** | [@OfficialLoganK](https://x.com/OfficialLoganK) | Google AI Studio 제품 |
+
+### 도구 창시자
+
+| 인물 | 도구 | 링크 |
+|------|------|------|
+| **Boris Cherny** | Claude Code | [howborisusesclaudecode.com](https://howborisusesclaudecode.com) |
+| **Paul Gauthier** | Aider | [aider.chat](https://aider.chat) |
+| **François Chollet** | Keras, ARC-AGI | [@fchollet](https://x.com/fchollet) |
+| **Jeremy Howard** | fast.ai | [@jeremyphoward](https://x.com/jeremyphoward) |
+
+### 실무 전문가/교육자
+
+| 인물 | 콘텐츠 | 특징 |
+|------|--------|------|
+| **Simon Willison** | [simonwillison.net](https://simonwillison.net) | LLM 실용 가이드, llm CLI |
+| **Addy Osmani** | [addyosmani.com](https://addyosmani.com) | AI 코딩 워크플로우, 스펙 작성 |
+| **Lilian Weng** | [lilianweng.github.io](https://lilianweng.github.io) | 딥러닝 개념 심층 |
+| **Sebastian Raschka** | [Ahead of AI](https://magazine.sebastianraschka.com) | LLM 교육, 책 저자 |
+| **Chip Huyen** | AI Engineering 저자 | ML 엔지니어링 실무 |
+
+### 뉴스레터 (정기 구독 추천)
+
+| 뉴스레터 | 특징 | 주기 |
+|----------|------|------|
+| [Latent Space](https://www.latent.space/) | AI 엔지니어링 심층, 인터뷰 | 주간 |
+| [Simon's Newsletter](https://simonwillison.net/) | LLM 동향 정리 | 월간 |
+| [Ahead of AI](https://magazine.sebastianraschka.com/) | 학술+실무 | 격주 |
+| [The Rundown AI](https://www.therundown.ai/) | 일일 AI 뉴스 | 일간 |
+| [AlphaSignal](https://alphasignal.ai/) | ML 연구, GitHub 트렌드 | 주간 |
+
+---
+
+## AI 시대의 시각과 인사이트
+
+### 핵심 관점들
+
+#### Andrej Karpathy - "진도 9 지진"
+> "강력한 외계인 도구가 설명서 없이 세상에 던져진 것 같다. 모두가 사용법을 더듬고 있고, 이 진도 9 커리어 지진이 이미 업계 전체를 흔들고 있다."
+
+- Vibe Coding: 자연어로 소프트웨어 구축
+- 코드 작성 → 코드 감독으로 역할 변화
+- "타이핑 코드는 펀치카드처럼 사라질 것"
+
+#### Boris Cherny - "AI가 모든 코드를 작성"
+> "지난 달 우리 팀 200개 PR을 AI가 모두 작성했다. IDE 없이."
+
+- 검증 피드백 루프의 중요성
+- "Claude에게 검증 방법을 제공하면 품질 2-3배 향상"
+- 레거시 기억이 없는 신입이 더 빨리 적응
+
+#### Simon Willison - "제본스 패러독스"
+> "코드 생산 비용이 급락하면 커리어가 평가절하될까, 아니면 커스텀 소프트웨어 수요가 10배 늘어 더 가치있어질까?"
+
+- AI 코딩을 많이 할수록 일자리 걱정이 줄어듦
+- 스펙→코드 변환은 자동화, "그 외 모든 것"은 더 커짐
+- 읽기/이해/판단 능력이 더 중요해짐
+
+#### Addy Osmani - "AI는 페어 프로그래머"
+> "AI를 마법이 아닌 강력한 페어 프로그래머로 대하라."
+
+**5가지 원칙:**
+1. 상세한 스펙으로 시작
+2. 작고 반복적인 청크로 작업
+3. 풍부한 컨텍스트 제공
+4. 자동화된 품질 게이트 사용
+5. 인간이 최종 책임
+
+#### Sean Goedecke - "신중한 실용주의"
+> "AI가 대신 결정하게 하고 싶지 않다. 내가 이미 구상한 것을 타이핑해주길 원할 뿐."
+
+- AI는 검증 용도로만
+- 큰 코드 블록 생성에는 의존 안 함
+- 결정권은 항상 인간에게
+
+### 2026년 개발자 역할 변화
+
+| 과거 | 현재 | 미래 |
+|------|------|------|
+| 코드 작성자 | AI 감독자 | 오케스트레이터 |
+| 구문 숙달 | 프롬프트 엔지니어링 | 의도 명확화 |
+| 개별 기능 구현 | 검증 & 리뷰 | 시스템 설계 |
+| IDE 숙련 | 도구 선택 | AI 에이전트 조율 |
+
+### 균형 잡힌 시각
+
+**낙관론:**
+- 생산성 10배 향상 가능
+- 비개발자도 앱 제작 가능 (Vibe Coding)
+- 반복 작업에서 해방
+
+**현실론:**
+- 환각, 보안 취약점 문제
+- 복잡한 시스템에서는 여전히 인간 필요
+- "AI 생성 코드 디버깅이 직접 작성보다 오래 걸린다" (45% 개발자)
+
+**권장 자세:**
+1. 도구로 활용하되 맹신하지 말 것
+2. 검증 습관 필수
+3. 기초 역량(읽기, 설계, 판단)은 더 중요해짐
+4. 새로운 도구에 열린 자세, but 비판적 평가
+
+---
+
+*마지막 업데이트: 2026-01-28*

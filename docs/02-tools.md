@@ -11,7 +11,7 @@
 | 도구 | Stars | 제공자 | 특징 |
 |------|-------|--------|------|
 | **[Claude Code](https://claude.ai/code)** | 55K+ | Anthropic | 200K 컨텍스트, 멀티파일, MCP 지원 → [상세 가이드](04-claude-code.md) |
-| **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** | 50K+ | Google | 컨텍스트 파일 기반 개발, 무료 티어 |
+| **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** | 90K+ | Google | 1M 컨텍스트, 무료 티어 (60req/min) |
 | **[Codex CLI](https://github.com/openai/codex)** | 15K+ | OpenAI | GPT-4.1, 샌드박스 실행 |
 
 #### Claude Code
@@ -20,9 +20,9 @@
 - **적합**: 대규모 리팩토링, 복잡한 버그, 설계 수준 변경
 
 #### Gemini CLI
-- **강점**: Google 생태계 통합, Conductor로 컨텍스트 기반 개발
+- **강점**: Google 생태계 통합, 1M 토큰 컨텍스트, 무료 티어
 - **약점**: Claude/GPT 대비 코딩 성능 논쟁
-- **적합**: Google Cloud 사용자, 실험적 사용
+- **적합**: Google Cloud 사용자, 비용 민감 개발자
 
 #### Codex CLI
 - **강점**: OpenAI 생태계, GPT-4.1 최신 모델
@@ -36,7 +36,13 @@
 | **GitHub Copilot** | 68% 채택률, Agent Mode, MCP 지원 | $10-19/월 |
 | **Cursor** | Copilot fork, 벡터 기반 이해, 체크포인트 | $20/월 |
 | **Windsurf** | Codeium, Riptide 검색 | $15/월 |
+| **[Warp](https://warp.dev)** | AI 터미널, 멀티 에이전트, Full Terminal Use | 무료 + Pro |
 | **[Amp Code](https://ampcode.com)** | Sourcegraph, 멀티모델, Claude Skills 호환 | $10/일 무료 + 유료 |
+
+#### Warp
+- **강점**: 터미널 자체가 AI 에이전트, Full Terminal Use (REPL/디버거 조작), MCP 통합
+- **약점**: macOS/Linux만 (Windows 제한적)
+- **적합**: 터미널 헤비유저, CLI 작업 중심 개발자
 
 #### Amp Code vs Claude Code
 | 측면 | Claude Code | Amp Code |
@@ -54,9 +60,10 @@
 
 | 도구 | Stars | 특징 |
 |------|-------|------|
-| **[Aider](https://github.com/paul-gauthier/aider)** | 25K+ | Git 통합, diff 기반 편집, 멀티 LLM |
-| **[OpenCode](https://github.com/opencode-ai/opencode)** | 활발 | BYOK, 병렬 세션, LSP 통합, 온프레미스 |
+| **[Aider](https://github.com/Aider-AI/aider)** | 40K+ | Git 통합, diff 기반 편집, 멀티 LLM |
+| **[OpenCode](https://github.com/anomalyco/opencode)** | 70K+ | BYOK, 병렬 세션, LSP 통합, GitHub Copilot 공식 지원 |
 | **[Plandex](https://github.com/plandex-ai/plandex)** | 활발 | 2M 토큰 컨텍스트, 30+ 언어 |
+| **[Qodo Command](https://www.qodo.ai)** | 활발 | PR 리뷰, 테스트 감사, CI/CD 통합, 멀티 LLM |
 
 #### Aider
 - **강점**: Git 통합, 투명한 diff 기반 편집
@@ -74,10 +81,11 @@
 
 | 도구 | Stars | 특징 |
 |------|-------|------|
-| **[Cline](https://github.com/cline/cline)** | 40K+ | VS Code, Plan/Act 모드, 자율 에이전트 |
+| **[Cline](https://github.com/cline/cline)** | 52K+ | VS Code, Plan/Act 모드, 자율 에이전트 |
 | **[Roo Code](https://github.com/RooVetGit/Roo-Cline)** | 10K+ | VS Code, 멀티 에이전트, 역할 기반 |
 | **[Continue](https://github.com/continuedev/continue)** | 25K+ | VS Code/JetBrains, 엔터프라이즈, 셀프호스트 |
 | **[Tabby](https://github.com/TabbyML/tabby)** | 25K+ | 셀프호스트 Copilot 대안 |
+| **[Kilo Code](https://kilocode.ai)** | 활발 | 구조화된 모드, 컨텍스트 관리 강화, 환각 감소 |
 | **[Cody](https://sourcegraph.com/cody)** | - | Sourcegraph, 대형 모노레포 특화 |
 | **[Zed AI](https://zed.dev/ai)** | 55K+ | 고성능 에디터, ACP 프로토콜 |
 
@@ -123,7 +131,9 @@
 | 모델 | 제공자 | 특징 |
 |------|--------|------|
 | **Qwen3-Coder** | Alibaba | 오픈소스 SOTA, 256K 컨텍스트, SWE-bench 69.6% |
+| **DeepSeek R1** | DeepSeek | 오픈소스 추론 모델, "DeepSeek moment" 촉발 |
 | **DeepSeek Coder V2** | DeepSeek | 128K 컨텍스트, 338 언어, MoE 236B |
+| **Devstral 2** | Mistral | 에이전틱 특화, SWE-bench 53.8%, IDE 통합 |
 | **Codestral** | Mistral | 80+ 언어, HumanEval 86.6% |
 | **StarCoder2** | BigCode | 오픈소스, 다양한 크기 |
 

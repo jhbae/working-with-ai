@@ -41,53 +41,16 @@ cd ../feature-api && claude
 
 | 도구 | Stars | 특징 |
 |------|-------|------|
-| **[SuperClaude](https://github.com/SuperClaude-Org/SuperClaude_Framework)** | 19K+ | 16 페르소나, 30 명령어 |
 | **[oh-my-claude-sisyphus](https://github.com/Yeachan-Heo/oh-my-claude-sisyphus)** | 활발 | 모델 라우팅, 자동 반복 |
 | **[oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode)** | 활발 | Sisyphus + OpenCode |
 | **[moai-adk](https://github.com/modu-ai/moai-adk)** | 활발 | SPEC-First DDD, 한국어 |
-| **[Claude-Flow](https://github.com/ruvnet/claude-flow)** | 11K+ | 멀티 에이전트 스웜 |
+| **[Claude-Flow](https://github.com/ruvnet/claude-flow)** | 12K+ | 멀티 에이전트 스웜 |
 | **[Claude-Squad](https://github.com/smtg-ai/claude-squad)** | 5.6K | 여러 에이전트 동시 관리 |
 | **[Conductor](https://conductor.build)** | - | macOS 앱, Claude Code+Codex 병렬, Git Worktree 자동화 |
 
 ---
 
-## 3. SuperClaude
-
-### 설치
-```bash
-pipx install superclaude
-superclaude install
-```
-
-### 16개 페르소나
-
-| 페르소나 | 용도 | 사용법 |
-|----------|------|--------|
-| architect | 시스템 설계 | `/analyze --architect` |
-| frontend | UI/UX, 접근성 | `/build --frontend` |
-| backend | API, 인프라 | `/code --backend` |
-| security | 보안 리뷰 | `/review --security` |
-| analyzer | 디버깅, 분석 | `/debug --analyzer` |
-| devops | CI/CD, 인프라 | `/deploy --devops` |
-| database | 스키마, 쿼리 | `/optimize --database` |
-| testing | 테스트 전략 | `/test --testing` |
-
-### 주요 명령어
-```bash
-/analyze --security     # 보안 분석
-/build --frontend       # 프론트엔드 구현
-/review --architect     # 아키텍처 리뷰
-/debug --analyzer       # 디버깅
-```
-
-### 현실
-- 커뮤니티 주도, Anthropic 공식 아님
-- 기본 Claude도 대부분 가능
-- 일관된 관점이 필요할 때 유용
-
----
-
-## 4. oh-my-claude-sisyphus
+## 3. oh-my-claude-sisyphus
 
 "작업 완료까지 계속 굴리는" 에이전트.
 
@@ -121,7 +84,7 @@ Sisyphus (Opus) - 오케스트레이터
 
 ---
 
-## 5. moai-adk
+## 4. moai-adk
 
 SPEC-First DDD 방법론 기반 오케스트레이터.
 
@@ -154,7 +117,7 @@ SPEC-First DDD 방법론 기반 오케스트레이터.
 
 ---
 
-## 6. Claude-Flow
+## 5. Claude-Flow
 
 멀티 에이전트 스웜 플랫폼.
 
@@ -173,7 +136,7 @@ claude-flow init
 
 ---
 
-## 7. Claude-Squad
+## 6. Claude-Squad
 
 여러 AI 에이전트 동시 관리.
 
@@ -197,7 +160,7 @@ cs  # 실행
 
 ---
 
-## 8. Conductor (conductor.build)
+## 7. Conductor (conductor.build)
 
 macOS용 멀티 에이전트 오케스트레이터.
 

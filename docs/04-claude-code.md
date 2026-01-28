@@ -101,6 +101,8 @@ claude
 ### 개요
 MCP는 Claude가 외부 도구/서비스와 통신하는 프로토콜.
 
+> **2026 업데이트**: Anthropic이 MCP를 Linux Foundation의 **Agentic AI Foundation**에 기여. 오픈 거버넌스로 전환되어 에이전트 간 상호운용성 표준화 진행 중.
+
 ### 권장 규칙
 - 20-30개 MCP 설정 가능
 - **동시 활성화는 10개 이하**
@@ -387,16 +389,16 @@ Hooks는 Claude 동작 시점에 실행되는 사용자 정의 스크립트.
 |----------|-------|------|
 | **[skills](https://github.com/anthropics/skills)** | 37.5K | 공식 에이전트 스킬 저장소 |
 | **[agents](https://github.com/wshobson/agents)** | 25K | 프로덕션 서브에이전트 모음 |
-| **[SuperClaude](https://github.com/SuperClaude-Org/SuperClaude_Framework)** | 20K | 16 페르소나, 30 명령어 프레임워크 |
+| **[SuperClaude](https://github.com/SuperClaude-Org/SuperClaude_Framework)** | 20K | 9 페르소나, 19 명령어 (설정 프레임워크) |
 | **[claudia](https://github.com/marcusbey/claudia)** | 19.9K | GUI 앱 & 에이전트 관리 도구 |
 | **[vibe-kanban](https://github.com/)** | 14.7K | 칸반 보드 인터페이스 |
 | **[claude-mem](https://github.com/thedotmack/claude-mem)** | 13.1K | 세션 간 메모리 유지 (ChromaDB) |
 | **[Claude-Flow](https://github.com/ruvnet/claude-flow)** | 11.4K | 멀티 에이전트 스웜 오케스트레이션 |
 | **[zen-mcp-server](https://github.com/)** | 10.8K | 다중 모델 통합 MCP |
 
-### 6.2 에이전트 오케스트레이션 (1K+ Stars)
+### 6.2 오케스트레이션 & 확장 프레임워크
 
-#### Claude-Flow
+#### Claude-Flow (오케스트레이터)
 멀티 에이전트 스웜 플랫폼. 54+ 전문 에이전트 배포.
 
 ```bash
@@ -417,7 +419,7 @@ claude-flow init
 
 ---
 
-#### Claude-Squad (5.6K Stars)
+#### Claude-Squad (오케스트레이터, 5.6K Stars)
 여러 AI 에이전트 동시 관리 (Claude Code, Aider, Codex, OpenCode, Amp).
 
 ```bash
@@ -437,8 +439,8 @@ cs
 
 ---
 
-#### SuperClaude (20K Stars)
-16개 페르소나, 30개 명령어.
+#### SuperClaude (설정 프레임워크, 20K Stars)
+9개 페르소나, 19개 명령어로 단일 Claude 세션 향상. *병렬 실행/오케스트레이션 아님.*
 
 ```bash
 # 설치
@@ -464,7 +466,7 @@ superclaude install
 
 **링크:** [github.com/SuperClaude-Org/SuperClaude_Framework](https://github.com/SuperClaude-Org/SuperClaude_Framework)
 
-#### oh-my-claude-sisyphus
+#### oh-my-claude-sisyphus (오케스트레이터)
 멀티 에이전트 오케스트레이션. 작업 완료까지 자동 반복.
 
 ```bash

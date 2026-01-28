@@ -1,0 +1,279 @@
+# 실전 기법 & 패턴
+
+AI 에이전트 활용 시 검증된 기법과 패턴 모음.
+
+---
+
+## 1. 좋은 스펙 작성법 (Addy Osmani)
+
+> 출처: [Writing Good Specs for AI Agents](https://addyosmani.com/blog/good-spec/)
+
+### 5가지 핵심 원칙
+
+#### 1. 고수준 비전부터 시작
+```markdown
+# 잘못된 접근
+"다음은 모든 요구사항이에요: 인증, 결제, 이메일..."
+
+# 올바른 접근
+"사용자가 작업을 추가/편집/완료할 수 있는 웹 앱 구축.
+사용자 계정, 데이터베이스, 반응형 UI 필요"
+→ AI가 상세 스펙 작성하도록 요청
+```
+
+#### 2. PRD 구조화 (6가지 필수 영역)
+```markdown
+# 프로젝트 스펙
+
+## 기술 스택
+React 18+, TypeScript, Vite, Tailwind CSS
+
+## 명령어
+- Build: `npm run build`
+- Test: `npm test`
+- Lint: `npm run lint --fix`
+
+## 테스트
+- Framework: Vitest
+- 위치: `tests/`
+- 커버리지: 80% 이상
+
+## 프로젝트 구조
+src/, tests/, docs/
+
+## 코드 스타일
+[설명보다 실제 코드 스니펫이 효과적]
+
+## 경계 (중요!)
+✅ 항상: 테스트 실행, 명명 규칙 준수
+⚠️ 먼저 묻기: DB 스키마 변경, 의존성 추가
+🚫 절대 금지: 시크릿 커밋, node_modules 수정
+```
+
+#### 3. 작은 단위 태스크로 분할
+
+> "지시사항의 저주": 요구사항이 많을수록 각각의 준수율 급락
+
+```
+Step 1: DB 스키마 구현
+Step 2: 인증 기능
+Step 3: UI 컴포넌트
+→ 순차적 포커스
+```
+
+| 방식 | 장점 | 적합 |
+|------|------|------|
+| 단일 에이전트 | 간단한 설정 | 중소 프로젝트 |
+| 멀티 에이전트 | 높은 처리량 | 대규모 코드베이스 |
+
+#### 4. 3단계 경계 시스템
+```
+✅ 항상 실행 (승인 불필요)
+   "항상 커밋 전 테스트 실행"
+
+⚠️ 먼저 문의 (검토 필요)
+   "DB 스키마 변경 전 확인"
+
+🚫 절대 금지 (하드스탑)
+   "절대 시크릿이나 API 키 커밋 금지"
+```
+
+#### 5. 테스트, 반복, 진화
+- 각 마일스톤 후 테스트 실행
+- 실패 시 스펙 업데이트
+- Git으로 스펙도 버전 관리
+- "LLM as Judge": 두 번째 AI가 스펙 준수 여부 평가
+
+### 피해야 할 함정
+
+| 함정 | 문제 | 해결 |
+|------|------|------|
+| 모호한 스펙 | "좋게 만들어" | "추가/편집/삭제 가능, 반응형" |
+| 과도한 컨텍스트 | 50페이지 문서 | 계층적 요약, 토큰 예산 관리 |
+| 인간 검토 생략 | 테스트만으로 부족 | 중요 코드 경로 항상 검토 |
+
+---
+
+## 2. Anthropic 공식 워크플로우
+
+> 출처: [Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices)
+
+### 탐색 → 계획 → 코드 → 커밋
+
+```
+Step 1: 탐색 (코딩 금지)
+  → 관련 파일/이미지/URL 읽기
+  → 복잡하면 서브에이전트 활용
+
+Step 2: 계획 수립
+  → Thinking mode 활용 (TAB으로 토글, 기본 활성화)
+  → 계획 문서화 후 검토
+
+Step 3: 구현
+  → 단계적으로 검증하며 진행
+
+Step 4: 커밋 & PR
+```
+
+> **핵심**: Step 1-2 없이는 Claude가 즉시 코딩 → 사전 탐색이 성능 향상의 열쇠
+
+### 헤드리스 모드 (자동화)
+```bash
+claude -p "프롬프트" --output-format stream-json
+```
+
+**사용 사례:**
+- 이슈 자동 분류 (GitHub 이벤트 트리거)
+- 주관적 코드 리뷰 (오타, 구식 주석 감지)
+- 팬아웃 패턴 (2,000개 파일 마이그레이션)
+
+---
+
+## 3. 에이전틱 패턴 (Agentic Patterns)
+
+> 출처: [Awesome Agentic Patterns](https://github.com/nibzard/awesome-agentic-patterns) (2.8K stars)
+> 웹사이트: [agentic-patterns.com](https://agentic-patterns.com)
+> 참고: [500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) - 500+ 에이전트 프로젝트 모음
+
+프로덕션 환경에서 검증된 **8개 카테고리, 130+ 패턴** 모음.
+
+| 카테고리 | 패턴 수 | 핵심 패턴 |
+|----------|---------|-----------|
+| **Context & Memory** | 13 | Curated Context Window, Episodic Memory |
+| **Feedback Loops** | 13 | CI Feedback, Self-Critique Loop |
+| **Learning** | 5 | Agent RFT, Skill Library Evolution |
+| **Orchestration** | 34 | Plan-Then-Execute, Sub-Agent Spawning |
+| **Reliability** | 14 | Schema Validation Retry, CriticGPT Review |
+| **Security** | 3 | Isolated VM, PII Tokenization |
+| **Tool Use** | 24 | Code-Over-API, CLI-First Design |
+| **UX** | 13 | Human-in-the-Loop, Spectrum of Control |
+
+### 핵심 인사이트
+- **Rich Feedback > Perfect Prompts**: 완벽한 프롬프트보다 풍부한 피드백이 효과적
+- **상태 외부화**: 에이전트 상태를 파일/DB에 저장 → 장기 실행 가능
+- **Code-Over-API**: API 대신 코드 기반 인터페이스가 LLM 친화적
+
+---
+
+## 4. 검증 피드백 루프
+
+> Boris Cherny (Claude Code 창시자): "Claude에게 작업 검증 방법을 제공하면 최종 결과 품질이 2-3배 향상"
+
+### 도메인별 검증 방법
+
+| 도메인 | 검증 방법 |
+|--------|-----------|
+| 백엔드 | 테스트 스위트 실행 |
+| 프론트엔드 | 브라우저에서 확인 |
+| 모바일 | 시뮬레이터 테스트 |
+| CLI | bash 명령어 실행 |
+
+### CLAUDE.md 예시
+```markdown
+## 검증
+- 모든 변경 후 `npm test` 실행
+- UI 변경 시 `npm run dev`로 브라우저 확인
+- API 변경 시 `curl` 테스트
+```
+
+---
+
+## 5. Ralph Loop (자율 반복 패턴)
+
+> "Ralph는 Bash 루프다" - Geoffrey Huntley
+> 이름 유래: 심슨의 Ralph Wiggum - 항상 실수하지만 절대 멈추지 않는다
+
+**참고**: Ralph Loop은 **패턴/기법**이고, [Sisyphus](05-parallel.md#4-oh-my-claude-sisyphus)는 이 패턴을 포함한 **풀 오케스트레이터**입니다.
+
+| Ralph Loop | Sisyphus |
+|-----------|----------|
+| 단순 반복 패턴 | 멀티 에이전트 오케스트레이터 |
+| 단일 에이전트 루프 | 모델 라우팅 (Opus→Sonnet→Haiku) |
+| bash while 수준 | LSP, AST, 병렬 태스크 활용 |
+
+### 핵심 개념
+
+PRD의 모든 항목이 완료될 때까지 AI 에이전트를 **반복 실행**하는 패턴.
+
+```
+while (not complete) {
+  1. Fresh context로 에이전트 시작
+  2. 작업 시도
+  3. 완료 태그 체크 (<promise>COMPLETE</promise>)
+  4. 미완료 시 → 피드백과 함께 재시작
+}
+```
+
+### 왜 Fresh Context인가?
+
+| 문제 | Ralph 해결책 |
+|------|-------------|
+| 컨텍스트 누적 오염 | 매 반복 fresh start |
+| 실패 히스토리 노이즈 | git이 memory layer |
+| 컨텍스트 윈도우 한계 | 작은 단위 PRD |
+
+### 구현 방식
+
+```bash
+# 기본 Ralph Loop (개념)
+while true; do
+  claude -p "PRD.md 기반으로 작업 진행" --output-format json
+
+  # 완료 체크
+  if grep -q "COMPLETE" output.json; then
+    break
+  fi
+
+  # 피드백 수집 후 재시작
+  git diff > feedback.txt
+done
+```
+
+### PRD 구조 예시
+```markdown
+# PRD: 사용자 인증 기능
+
+## Stories
+- [ ] 로그인 폼 구현
+- [ ] JWT 토큰 발급
+- [ ] 세션 관리
+
+## 완료 조건
+- 모든 테스트 통과
+- 린트 에러 없음
+```
+
+### 실전 팁
+
+| 팁 | 설명 |
+|----|------|
+| **작은 PRD** | 한 컨텍스트 윈도우에서 완료 가능한 크기 |
+| **AGENTS.md 활용** | 매 반복 후 학습 내용 기록 → 다음 반복에 반영 |
+| **테스트 주도** | 완료 조건을 테스트로 명확하게 정의 |
+| **git이 메모리** | 상태는 파일로, 히스토리는 git으로 |
+
+### 구현체 & 참고자료
+
+| 리소스 | 설명 |
+|--------|------|
+| [ghuntley.com/loop](https://ghuntley.com/loop/) | Geoffrey Huntley 원본 글 |
+| [ralph-playbook](https://github.com/ClaytonFarr/ralph-playbook) | 종합 가이드 |
+| [snarktank/ralph](https://github.com/snarktank/ralph) | PRD 기반 자율 루프 |
+| [vercel-labs/ralph-loop-agent](https://github.com/vercel-labs/ralph-loop-agent) | AI SDK 호환 구현 |
+| [Goose Ralph Loop 튜토리얼](https://block.github.io/goose/docs/tutorials/ralph-loop/) | Goose에서 Ralph 사용법 |
+| [Awesome Claude - Ralph](https://awesomeclaude.ai/ralph-wiggum) | Claude Code용 가이드 |
+
+### 실제 사례
+
+> Cursor CLI + Replica MCP로 Fruit Ninja 클론 제작
+> - 8번의 컨텍스트 로테이션
+> - 캔버스 렌더링 여러 번 실패 후 학습
+> - ~1시간 만에 완성, 인간 개입 0
+
+---
+
+## 다음 문서
+
+- [04-claude-code.md](04-claude-code.md) - Claude Code 상세
+- [05-parallel.md](05-parallel.md) - 병렬 작업 & 오케스트레이션
+- [references.md](references.md) - 참고 자료

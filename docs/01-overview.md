@@ -7,7 +7,7 @@
 ### 전체 사용률
 | 지표 | 수치 | 출처 |
 |------|------|------|
-| AI 도구 사용 개발자 | 85% | Stack Overflow 2025 |
+| AI 도구 사용 개발자 | 84% | Stack Overflow 2025 |
 | 에이전트 미사용/간단 도구만 | 52% | - |
 | Agentic AI 정기 사용자 | 25% | - |
 | "Vibe coding" 전문 업무 미사용 | 72% | - |
@@ -15,7 +15,7 @@
 ### 도구별 채택률
 | 도구 | 채택률 | 비고 |
 |------|--------|------|
-| ChatGPT | 82% | 범용, 코드 외 작업 포함 |
+| ChatGPT/OpenAI | 81% | 범용, 코드 외 작업 포함 |
 | GitHub Copilot | 68% | 자동완성 중심 |
 | Claude Code | 45% | 전문 개발자 기준 |
 | Cursor | 19.3% | Agentic 사용자 기준 |
@@ -35,10 +35,10 @@
 
 | 자동완성 | IDE 통합 | CLI 에이전트 | 오케스트레이터 |
 |----------|----------|--------------|----------------|
-| Copilot | Cursor | Claude Code | SuperClaude |
-| Tabnine | Windsurf | Gemini CLI | oh-my-* |
-| | Cline | OpenCode | moai-adk |
-| | | Aider, Codex | Kiro |
+| Copilot | Cursor | Claude Code | Claude-Flow |
+| Tabnine | Windsurf | Gemini CLI | Claude-Squad |
+| | Warp | OpenCode | oh-my-* |
+| | Cline | Aider, Codex | moai-adk |
 
 ### 분류 설명
 
@@ -50,7 +50,7 @@
 #### IDE 통합
 - 에디터 내에서 채팅/편집 지원
 - 파일 컨텍스트 인식
-- 예: Cursor, Windsurf, Cline
+- 예: Cursor, Windsurf, Warp, Cline
 
 #### CLI 에이전트
 - 터미널에서 동작
@@ -60,7 +60,7 @@
 #### 오케스트레이터
 - 여러 에이전트/모델 조율
 - 복잡한 워크플로우 자동화
-- 예: SuperClaude, oh-my-claude-sisyphus, moai-adk
+- 예: Claude-Flow, Claude-Squad, oh-my-claude-sisyphus, moai-adk
 
 ---
 
@@ -78,8 +78,8 @@
 ### 오픈소스
 | 도구 | Stars | 특징 |
 |------|-------|------|
-| Aider | 25K+ | Git 통합, diff 기반 |
-| Cline | 40K+ | VS Code, Plan/Act |
+| Aider | 40K+ | Git 통합, diff 기반 |
+| Cline | 52K+ | VS Code, Plan/Act |
 | Continue | 25K+ | 엔터프라이즈, 셀프호스트 |
 | Tabby | 25K+ | 셀프호스트 Copilot 대안 |
 
@@ -116,6 +116,35 @@
 | Claude Max | $100-200/월 | 대용량 사용 |
 | Windsurf | $15/월 | IDE 에이전트 |
 | OpenCode | 무료 | BYOK (API 비용 별도) |
+
+---
+
+## 5. 2026 트렌드
+
+### 핵심 변화
+
+| 트렌드 | 설명 |
+|--------|------|
+| **비용 최적화 우선** | "어떤 도구가 똑똑한가?" → "크레딧을 태우지 않는가?" |
+| **오픈소스 모델 부상** | DeepSeek R1, Qwen3-Coder 등 중국발 오픈소스 급성장 |
+| **Agentic AI 표준화** | MCP가 Linux Foundation으로 이관, 에이전트 상호운용성 중요 |
+| **멀티모달 기본화** | 텍스트만 다루는 도구는 불완전하게 느껴짐 |
+| **효율 vs 프론티어** | 거대 모델과 하드웨어 효율적 소형 모델 공존 |
+
+### 주목할 움직임
+
+- **DeepSeek moment**: 소규모 팀이 프론티어급 오픈소스 모델 발표 → 업계 충격
+- **로컬 AI 증가**: LM Studio 등 프라이버시 중시 배포 확대
+- **Vibe Coding 성숙**: Lovable $100M ARR, 비개발자도 앱 제작 가능
+- **도구 통합 경쟁**: IDE vs CLI vs 앱 빌더 경계 모호해짐
+
+### 개발자 관심사 변화
+
+```
+2024: "어떤 모델이 가장 똑똑한가?"
+2025: "어떤 도구가 가장 자율적인가?"
+2026: "어떤 도구가 워크플로우에 잘 통합되고 비용 효율적인가?"
+```
 
 ---
 

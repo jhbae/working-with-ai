@@ -13,7 +13,8 @@ AI 코딩 도구들의 현황, 설정 방법, 개발 방법론을 **실용적 �
 | [03-methodology.md](03-methodology.md) | 개발 방법론 (SDD, Agentic Patterns) |
 | [04-claude-code.md](04-claude-code.md) | Claude Code 완전 가이드 |
 | [05-parallel.md](05-parallel.md) | 병렬 작업 & 오케스트레이션 |
-| [references.md](references.md) | 참고 자료 모음 |
+| [06-practices.md](06-practices.md) | 실전 기법 & 패턴 |
+| [references.md](references.md) | 참고 자료 & 영향력자 |
 
 ---
 
@@ -35,7 +36,7 @@ Claude Code 추가 ($20-200/월)
 ### 3. 고급 사용자
 ```
 필요 시 검토:
-- SuperClaude: 16개 페르소나, 30개 명령어
+- SuperClaude: 9개 페르소나, 19개 명령어 (설정 프레임워크)
 - moai-adk: SPEC-First DDD, 한국어 지원
 - oh-my-claude-sisyphus: 멀티 에이전트 오케스트레이션
 ```
@@ -82,11 +83,11 @@ Claude Code 추가 ($20-200/월)
 
 ## 통계 (2025-2026)
 
-- 85% 개발자가 AI 도구 사용 (Stack Overflow 2025)
+- 84% 개발자가 AI 도구 사용 (Stack Overflow 2025)
 - 52%는 에이전트 미사용 또는 간단한 도구만
 - Agentic AI 정기 사용자는 25%
 - "Vibe coding"은 72%가 전문 업무에 미사용
 
 ---
 
-*마지막 업데이트: 2026-01-22*
+*마지막 업데이트: 2026-01-28*
