@@ -20,12 +20,13 @@ ai-dev-guide/
 ├── CLAUDE.md              # 프로젝트 설정
 ├── docs/
 │   ├── README.md          # 빠른 시작 & 권장사항
-│   ├── 01-overview.md     # 현황, 채택률, 분류
+│   ├── 01-overview.md     # 현황, 채택률, 분류, 2026 트렌드
 │   ├── 02-tools.md        # 도구 종합 비교
 │   ├── 03-methodology.md  # 개발 방법론
 │   ├── 04-claude-code.md  # Claude Code 완전 가이드
 │   ├── 05-parallel.md     # 병렬 작업 & 오케스트레이션
-│   └── references.md      # 참고 자료
+│   ├── 06-practices.md    # 실전 기법 & 패턴
+│   └── references.md      # 참고 자료 & 영향력자
 └── examples/              # 예제 설정 파일
 ```
 
