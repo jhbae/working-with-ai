@@ -39,11 +39,13 @@
 ## 커뮤니티 프로젝트
 
 ### 오케스트레이터
-- [SuperClaude Framework](https://github.com/SuperClaude-Org/SuperClaude_Framework) (19K+ stars)
+- [Claude-Flow](https://github.com/ruvnet/claude-flow) (12K+ stars)
+- [Claude-Squad](https://github.com/smtg-ai/claude-squad) (5.6K stars)
 - [oh-my-claude-sisyphus](https://github.com/Yeachan-Heo/oh-my-claude-sisyphus)
 - [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode)
-- [Claude-Flow](https://github.com/ruvnet/claude-flow) (11K+ stars)
-- [Claude-Squad](https://github.com/smtg-ai/claude-squad) (5.6K stars)
+
+### 설정 프레임워크
+- [SuperClaude Framework](https://github.com/SuperClaude-Org/SuperClaude_Framework) (20K+ stars) - 9개 페르소나, 19개 명령어
 
 ### Claude Code 확장
 - [claude-mem](https://github.com/thedotmack/claude-mem)
@@ -57,8 +59,8 @@
 - [GPT Engineer](https://github.com/gpt-engineer-org/gpt-engineer) (55K+ stars)
 - [MetaGPT](https://github.com/geekan/MetaGPT) (50K+ stars)
 - [Goose](https://github.com/block/goose) - Block(Square) 제작, MCP 지원
-- [Aider](https://github.com/paul-gauthier/aider) (25K+ stars)
-- [Cline](https://github.com/cline/cline) (40K+ stars)
+- [Aider](https://github.com/Aider-AI/aider) (40K+ stars)
+- [Cline](https://github.com/cline/cline) (52K+ stars)
 - [Plandex](https://github.com/plandex-ai/plandex)
 
 ---
