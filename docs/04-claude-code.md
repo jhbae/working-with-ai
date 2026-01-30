@@ -822,4 +822,11 @@ claude mcp add [name] ...
 
 ---
 
-*마지막 업데이트: 2026-01-21*
+## 다음 문서
+
+- [05-parallel.md](05-parallel.md) - 병렬 작업 & 오케스트레이션
+- [06-practices.md](06-practices.md) - 실전 기법 & 패턴
+
+---
+
+*마지막 업데이트: 2026-01-30*

@@ -96,3 +96,7 @@ requirements.md → design.md → tasks.md → 구현
 - [04-claude-code.md](04-claude-code.md) - Claude Code 상세
 - [05-parallel.md](05-parallel.md) - 병렬 작업 & 오케스트레이션
 - [06-practices.md](06-practices.md) - 실전 기법 & 패턴
+
+---
+
+*마지막 업데이트: 2026-01-30*

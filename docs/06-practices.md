@@ -274,6 +274,8 @@ done
 
 ## 다음 문서
 
-- [04-claude-code.md](04-claude-code.md) - Claude Code 상세
-- [05-parallel.md](05-parallel.md) - 병렬 작업 & 오케스트레이션
 - [references.md](references.md) - 참고 자료
+
+---
+
+*마지막 업데이트: 2026-01-30*

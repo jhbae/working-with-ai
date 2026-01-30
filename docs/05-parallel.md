@@ -223,5 +223,9 @@ npm install -g vibe-tools
 
 ## 다음 문서
 
-- [04-claude-code.md](04-claude-code.md) - Claude Code 상세
+- [06-practices.md](06-practices.md) - 실전 기법 & 패턴
 - [references.md](references.md) - 참고 자료
+
+---
+
+*마지막 업데이트: 2026-01-30*
