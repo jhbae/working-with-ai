@@ -138,6 +138,13 @@
 | **François Chollet** | Keras, ARC-AGI | [@fchollet](https://x.com/fchollet) |
 | **Jeremy Howard** | fast.ai | [@jeremyphoward](https://x.com/jeremyphoward) |
 
+### Claude Code 팀 (Anthropic)
+
+| 인물 | 역할 | 링크 | 주요 발표 |
+|------|------|------|----------|
+| **Boris Cherny** | 창시자 | [howborisusesclaudecode.com](https://howborisusesclaudecode.com) | 워크플로우, 검증 피드백 루프 |
+| **Thariq Shihipar** | Member of Technical Staff | [thariq.io](https://www.thariq.io/), [@ThariqS](https://github.com/ThariqS) | MCP Tool Search, Agent SDK, Third-Party 정책 |
+
 ### 실무 전문가/교육자
 
 | 인물 | 콘텐츠 | 특징 |
@@ -231,4 +238,4 @@
 
 ---
 
-*마지막 업데이트: 2026-01-28*
+*마지막 업데이트: 2026-01-30*
