@@ -37,6 +37,19 @@ cd ../feature-api && claude
 
 ## 2. 오케스트레이터 도구
 
+### 스킬/워크플로우 프레임워크
+
+| 도구 | Stars | 특징 |
+|------|-------|------|
+| **[Superpowers](https://github.com/obra/superpowers)** | 45K+ | TDD 강제, 5분 단위 계획, 4단계 디버깅 |
+| **[SuperClaude](https://github.com/SuperClaude-Org/SuperClaude_Framework)** | 20K+ | 9개 페르소나, 19개 명령어 |
+
+#### Superpowers
+- **철학**: "계획 먼저, 코딩 나중" - 테스트 없이 코드 작성 시 삭제
+- **워크플로우**: 브레인스토밍 → Git Worktree → 5분 단위 계획 → 서브에이전트 → TDD → 코드 리뷰
+- **핵심 스킬**: TDD (RED-GREEN-REFACTOR), 4단계 체계적 디버깅
+- **지원**: Claude Code 플러그인 마켓, Codex, OpenCode
+
 ### 도구 비교
 
 | 도구 | Stars | 특징 |
@@ -228,4 +241,4 @@ npm install -g vibe-tools
 
 ---
 
-*마지막 업데이트: 2026-01-30*
+*마지막 업데이트: 2026-02-06*

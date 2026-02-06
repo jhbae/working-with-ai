@@ -60,10 +60,17 @@
 
 | 도구 | Stars | 특징 |
 |------|-------|------|
+| **[OpenClaw](https://openclaw.ai)** | 100K+ | 모델 불가지론(Claude/OpenAI/KIMI), 로컬 실행, 메시징 통합 |
 | **[Aider](https://github.com/Aider-AI/aider)** | 40K+ | Git 통합, diff 기반 편집, 멀티 LLM |
 | **[OpenCode](https://github.com/anomalyco/opencode)** | 70K+ | BYOK, 병렬 세션, LSP 통합, GitHub Copilot 공식 지원 |
 | **[Plandex](https://github.com/plandex-ai/plandex)** | 활발 | 2M 토큰 컨텍스트, 30+ 언어 |
 | **[Qodo Command](https://www.qodo.ai)** | 활발 | PR 리뷰, 테스트 감사, CI/CD 통합, 멀티 LLM |
+
+#### OpenClaw (구 Clawdbot → Moltbot)
+- **강점**: 모델 불가지론(Claude, OpenAI, KIMI, MiMo 등), 로컬 실행, 메시징 플랫폼 통합
+- **약점**: 보안 우려 (샌드박스 권장), 이름 변경 혼란
+- **적합**: 다양한 모델 사용자, 프라이버시 중시
+- **참고**: Anthropic 상표권 요청으로 Clawdbot → Moltbot 변경 후, 크립토 스캐머 사건으로 OpenClaw로 최종 변경
 
 #### Aider
 - **강점**: Git 통합, 투명한 diff 기반 편집

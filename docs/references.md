@@ -45,6 +45,7 @@
 - [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode)
 
 ### 설정 프레임워크
+- [Superpowers](https://github.com/obra/superpowers) (45K+ stars) - TDD/디버깅/계획 워크플로우 강제
 - [SuperClaude Framework](https://github.com/SuperClaude-Org/SuperClaude_Framework) (20K+ stars) - 9개 페르소나, 19개 명령어
 
 ### Claude Code 확장
@@ -54,6 +55,7 @@
 - [claudekit](https://github.com/carlrannaberg/claudekit)
 
 ### 오픈소스 에이전트
+- [OpenClaw](https://openclaw.ai) (100K+ stars) - 구 Clawdbot/Moltbot, 모델 불가지론
 - [SWE-agent](https://github.com/SWE-agent/SWE-agent) (15K+ stars)
 - [Devika](https://github.com/stitionai/devika) (20K+ stars)
 - [GPT Engineer](https://github.com/gpt-engineer-org/gpt-engineer) (55K+ stars)
@@ -134,6 +136,7 @@
 | 인물 | 도구 | 링크 |
 |------|------|------|
 | **Boris Cherny** | Claude Code | [howborisusesclaudecode.com](https://howborisusesclaudecode.com) |
+| **Peter Steinberger** | OpenClaw | [openclaw.ai](https://openclaw.ai) |
 | **Paul Gauthier** | Aider | [aider.chat](https://aider.chat) |
 | **François Chollet** | Keras, ARC-AGI | [@fchollet](https://x.com/fchollet) |
 | **Jeremy Howard** | fast.ai | [@jeremyphoward](https://x.com/jeremyphoward) |
@@ -238,4 +241,4 @@
 
 ---
 
-*마지막 업데이트: 2026-01-30*
+*마지막 업데이트: 2026-02-02*
