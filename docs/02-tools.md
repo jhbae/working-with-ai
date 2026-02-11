@@ -10,7 +10,7 @@
 
 | 도구 | Stars | 제공자 | 특징 |
 |------|-------|--------|------|
-| **[Claude Code](https://claude.ai/code)** | 55K+ | Anthropic | 200K 컨텍스트, 멀티파일, MCP 지원 → [상세 가이드](04-claude-code.md) |
+| **[Claude Code](https://claude.ai/code)** | 55K+ | Anthropic | Opus 4.6 Agent Teams, 200K 컨텍스트 (1M 베타), MCP 지원 → [상세 가이드](04-claude-code.md) |
 | **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** | 90K+ | Google | 1M 컨텍스트, 무료 티어 (60req/min) |
 | **[Codex CLI](https://github.com/openai/codex)** | 15K+ | OpenAI | GPT-4.1, 샌드박스 실행 |
 
@@ -35,9 +35,10 @@
 |------|------|------|
 | **GitHub Copilot** | 68% 채택률, Agent Mode, MCP 지원 | $10-19/월 |
 | **Cursor** | Copilot fork, 벡터 기반 이해, 체크포인트 | $20/월 |
-| **Windsurf** | Codeium, Riptide 검색 | $15/월 |
+| **Windsurf** | Wave 13: 병렬 멀티에이전트, Agent Skills, SWE-1.5 무료 | $15/월 |
 | **[Warp](https://warp.dev)** | AI 터미널, 멀티 에이전트, Full Terminal Use | 무료 + Pro |
-| **[Amp Code](https://ampcode.com)** | Sourcegraph, 멀티모델, Claude Skills 호환 | $10/일 무료 + 유료 |
+| **[Amp Code](https://ampcode.com)** | Sourcegraph, 멀티모델 자동 라우팅, 서브에이전트 병렬, Skills 호환 | $10/일 무료 + 종량제 |
+| **[Copilot Workspace](https://githubnext.com/projects/copilot-workspace)** | Agents HQ: Claude+Codex 병렬 실행, 이슈→PR 자동화 | Pro+/Enterprise |
 
 #### Warp
 - **강점**: 터미널 자체가 AI 에이전트, Full Terminal Use (REPL/디버거 조작), MCP 통합
@@ -47,10 +48,12 @@
 #### Amp Code vs Claude Code
 | 측면 | Claude Code | Amp Code |
 |------|-------------|----------|
-| 모델 | Anthropic 위주 | 멀티모델 (유연함) |
-| 팀 협업 | 기본 | 스레드/컨텍스트 공유 기본 |
+| 모델 | Claude만 | Claude + GPT + Gemini (자동 선택) |
+| 자동 작업 분배 | Agent Teams (Opus 4.6) | 서브에이전트 병렬 실행 |
+| 비용 | $200/월 고정 (Max) | 종량제, 무료 $10/일 (~$300/월) |
+| 팀 협업 | 기본 | 스레드 공유, 리더보드 |
 | Skills | 원본 | Claude Skills 호환 |
-| 모드 | 단일 | Smart/Rush (비용 최적화) |
+| 레이트 리밋 | 있음 (5시간 윈도우) | 없음 |
 
 > "Claude Code를 이긴 첫 번째 도구" - Glen Maddern, Cloudflare
 
@@ -65,6 +68,7 @@
 | **[OpenCode](https://github.com/anomalyco/opencode)** | 70K+ | BYOK, 병렬 세션, LSP 통합, GitHub Copilot 공식 지원 |
 | **[Plandex](https://github.com/plandex-ai/plandex)** | 활발 | 2M 토큰 컨텍스트, 30+ 언어 |
 | **[Qodo Command](https://www.qodo.ai)** | 활발 | PR 리뷰, 테스트 감사, CI/CD 통합, 멀티 LLM |
+| **[OpenHands](https://openhands.dev)** | 60K+ | $18.8M 시리즈A, 87% 버그 당일 해결, AMD/Apple/Google 사용 |
 
 #### OpenClaw (구 Clawdbot → Moltbot)
 - **강점**: 모델 불가지론(Claude, OpenAI, KIMI, MiMo 등), 로컬 실행, 메시징 플랫폼 통합
@@ -77,10 +81,20 @@
 - **약점**: 설정 복잡도
 - **적합**: Git 워크플로우 중시, 명시적 제어 선호
 
+#### Aider 실사용 주의점
+- **수동 파일 선택 필수**: Claude Code/OpenCode와 달리 파일을 직접 추가해야 함
+- **대형 코드베이스 한계**: 컨텍스트 윈도우 초과 시 성능 급락
+- **원치 않는 편집**: 질문만 하려는데 코드를 수정하고 커밋하는 사례 빈번
+
 #### OpenCode
 - **강점**: 오픈소스, BYOK(모델 자유 선택), 병렬 세션, LSP 통합
 - **약점**: 상대적으로 신생
 - **적합**: 비용 민감, 프라이버시 중시, 온프레미스 필요
+
+#### OpenCode 실사용 주의점
+- **보안**: CVE-2026-22812 (CVSS 8.8) RCE 취약점 발견, v1.0.216+에서 패치
+- **안정성**: 허락 없는 코드 리포맷, 테스트 삭제 사례 보고
+- **Git 부하**: 세션 스냅샷으로 대형 코드베이스에서 CPU 과부하 발생
 
 ---
 
@@ -108,6 +122,7 @@
 | **[Devika](https://github.com/stitionai/devika)** | 20K+ | Devin 대안, 웹 리서치 + 코딩 |
 | **[SWE-agent](https://github.com/SWE-agent/SWE-agent)** | 15K+ | SWE-bench SOTA, NeurIPS 2024 |
 | **[Smol Developer](https://github.com/smol-ai/developer)** | 12K+ | 경량 프로토타입 에이전트 |
+| **[Grok Build](https://build.x.ai)** | 활발 | xAI, 자연어→소프트웨어, Grok Code Fast-1 모델 |
 
 ---
 
@@ -118,7 +133,7 @@
 | **[Lovable](https://lovable.dev)** | $100M ARR, Supabase 통합 | MVP, 사이드 프로젝트 |
 | **[v0](https://v0.app)** (Vercel) | React/Next.js 특화, 에이전트 모드 | 프론트엔드 |
 | **[Bolt.new](https://bolt.new)** | 브라우저 기반, WebContainer, 오픈소스 | 빠른 프로토타입 |
-| **[Replit Agent](https://replit.com)** | 다국어, Plan/Build 모드, 풀스택 | 학습, 실험 |
+| **[Replit Agent v3](https://replit.com)** | 200분 자율 실행, 자가치유, 2-3x 속도 향상 | 학습, 실험, $100/월 Pro |
 
 ---
 
@@ -130,6 +145,7 @@
 | **[GitHub Spec-Kit](https://github.com/github/spec-kit)** | CLI | 다양한 코딩 도구 지원 | 초기 |
 | **[cc-sdd](https://github.com/gotalab/cc-sdd)** | 설정 | Claude Code/Cursor/Gemini 등 | 커뮤니티 |
 | **[OpenSpec](https://github.com/Fission-AI/OpenSpec)** | 프레임워크 | 범용 SDD | 커뮤니티 |
+| **[Tessl](https://tessl.io)** | 프레임워크 | 스펙 레지스트리 10K+, 57%→93% 성공률 개선 | 성장중 |
 
 ---
 
@@ -143,6 +159,10 @@
 | **Devstral 2** | Mistral | 에이전틱 특화, SWE-bench 53.8%, IDE 통합 |
 | **Codestral** | Mistral | 80+ 언어, HumanEval 86.6% |
 | **StarCoder2** | BigCode | 오픈소스, 다양한 크기 |
+| **GPT-5.3-Codex** | OpenAI | 최신 코딩 에이전트 모델, Terminal-Bench 77.3% |
+| **Gemini 2.5 Flash/Pro** | Google | 고급 추론/코딩, 에이전틱 특화, 2.0 Flash 3/31 종료 |
+| **DeepSeek-V3.1** | DeepSeek | 671B (37B 활성), 하이브리드 추론+코딩, 128K 컨텍스트 |
+| **Grok Code Fast-1** | xAI | 경량 코딩 추론, Copilot/Cursor/Windsurf 등 무료 파트너십 |
 
 ---
 
@@ -152,7 +172,9 @@
 |------|------|
 | **Amazon Q Developer** | AWS 통합, 코드 리뷰, Java/.NET 업그레이드 |
 | **Augment Code** | 전체 코드베이스 이해, Context Engine |
-| **Google Antigravity** | Windsurf 인수 기반, 자율 에이전트 (초기) |
+| **Google Antigravity** | Windsurf 인수 기반, 무료 AI IDE 프리뷰 (2026-01-08), 병렬 에이전트 오케스트레이션 |
+| **[Devin](https://cognition.ai)** | Cognition AI, 자율 코딩 에이전트, Devin Review(PR 리뷰), Infosys 파트너십 |
+| **[Factory.ai](https://factory.ai)** | "Droid" 에이전트, SWE-Bench 84.8%, Terminal-Bench SOTA, 이슈→PR 자동화 |
 
 ---
 
@@ -173,3 +195,5 @@
 - [03-methodology.md](03-methodology.md) - 개발 방법론
 - [04-claude-code.md](04-claude-code.md) - Claude Code 상세
 - [05-parallel.md](05-parallel.md) - 오케스트레이터 상세
+
+*마지막 업데이트: 2026-02-10*

@@ -23,6 +23,9 @@
 ### 신뢰와 우려
 - **87%** 정확도 우려
 - **81%** 보안/프라이버시 우려
+- **46%** AI 정확도를 적극적으로 불신 vs **33%** 신뢰 (출처: [Stack Overflow 2025](https://survey.stackoverflow.co/2025/ai))
+- **66%** "거의 맞지만 완전하지 않은 코드"가 최대 불만
+- 긍정적 감정: 2023-24년 70%+ → 2025년 60%로 하락
 - 도구를 "가속기"로 사용 vs "위임자"로 사용하는 차이
 
 ---
@@ -130,9 +133,16 @@
 | **Agentic AI 표준화** | MCP가 Linux Foundation으로 이관, 에이전트 상호운용성 중요 |
 | **멀티모달 기본화** | 텍스트만 다루는 도구는 불완전하게 느껴짐 |
 | **효율 vs 프론티어** | 거대 모델과 하드웨어 효율적 소형 모델 공존 |
+| **멀티에이전트 병렬 실행** | GitHub Agents HQ, Windsurf Wave 13 등 에이전트 동시 실행이 표준화 |
 
 ### 주목할 움직임
 
+- **MIT 선정**: "Generative Coding"이 [MIT Technology Review 2026 10대 혁신 기술](https://www.technologyreview.com/2026/01/12/1130027/generative-coding-ai-software-2026-breakthrough-technology)에 선정
+- **빅테크 AI 코드 비율**: Microsoft 코드의 30%, Google 코드의 25%+가 AI 작성 (각 사 CEO 발언)
+- **에이전트 오케스트레이션 공식화**: Anthropic의 [2026 Agentic Coding Trends Report](https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf) - 코드 작성 → 에이전트 조율로 전환
+- **AGENTS.md 표준화**: 60K+ 오픈소스 프로젝트 채택, Linux Foundation의 Agentic AI Foundation에서 거버넌스 ([agents.md](https://agents.md/))
+- **Vibe Coding 공식화**: Collins 올해의 단어 2025, $81.4B 시장 규모 → $127B (2032)
+- **GitHub Agents HQ**: Claude, Codex 등 멀티에이전트를 GitHub 내에서 병렬 실행 (2026-02-04)
 - **DeepSeek moment**: 소규모 팀이 프론티어급 오픈소스 모델 발표 → 업계 충격
 - **로컬 AI 증가**: LM Studio 등 프라이버시 중시 배포 확대
 - **Vibe Coding 성숙**: Lovable $100M ARR, 비개발자도 앱 제작 가능
@@ -152,3 +162,5 @@
 
 - [02-tools.md](02-tools.md) - 도구 상세 비교
 - [03-methodology.md](03-methodology.md) - 개발 방법론
+
+*마지막 업데이트: 2026-02-10*

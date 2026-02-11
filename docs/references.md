@@ -10,11 +10,20 @@
 - [Claude Code Docs - Memory](https://code.claude.com/docs/en/memory)
 - [Claude Code Docs - Hooks](https://code.claude.com/docs/en/hooks-guide)
 - [Claude Code Docs - MCP](https://code.claude.com/docs/en/mcp)
+- [Claude Opus 4.6 Announcement](https://www.anthropic.com/news/claude-opus-4-6)
 
 ### 기타 공식
 - [OpenCode](https://opencode.ai/)
 - [GitHub Copilot Agent Mode](https://github.blog/ai-and-ml/github-copilot/agent-mode-101-all-about-github-copilots-powerful-mode/)
+- [GitHub Agents HQ](https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq/)
 - [moai-adk](https://github.com/modu-ai/moai-adk)
+- [AGENTS.md Standard](https://agents.md/) - 60K+ 프로젝트 채택, 에이전트 가이드 표준
+- [Agentic AI Foundation](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation) - Linux Foundation
+- [MCP Apps](http://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/) - MCP 인터랙티브 UI 확장
+- [Tessl Framework](https://tessl.io) - 스펙 중심 개발 프레임워크
+- [OpenHands](https://openhands.dev) - 오픈소스 코딩 에이전트, $18.8M 시리즈A
+- [Amp Code](https://ampcode.com) - Sourcegraph, 멀티모델 자동 라우팅
+- [OpenRouter](https://openrouter.ai) - 400+ LLM 통합 게이트웨이
 
 ---
 
@@ -23,6 +32,10 @@
 ### 필독
 - [How Boris Uses Claude Code](https://howborisusesclaudecode.com/) - Claude Code 창시자 워크플로우
 - [Writing Good Specs for AI Agents](https://addyosmani.com/blog/good-spec/) - Addy Osmani
+- [My LLM Coding Workflow 2026](https://addyosmani.com/blog/ai-coding-workflow/) - Addy Osmani, 계획 우선 접근법
+- [My AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey) - Mitchell Hashimoto (HashiCorp 창립자), AI 도입 6단계
+- [Compound Engineering](https://every.to/guides/compound-engineering) - Kieran Klaassen, 복리형 AI 네이티브 개발
+- [How to Effectively Write Quality Code with AI](https://heidenstedt.org/posts/2026/how-to-effectively-write-quality-code-with-ai/) - AI 코드 리뷰 추적 주석 기법
 
 ### CLAUDE.md 작성
 - [Writing a good CLAUDE.md](https://www.humanlayer.dev/blog/writing-a-good-claude-md)
@@ -33,6 +46,13 @@
 - [Roo Code vs Cline](https://www.qodo.ai/blog/roo-code-vs-cline/)
 - [Best AI Coding Agents 2026](https://www.faros.ai/blog/best-ai-coding-agents-2026)
 - [SDD Tools Analysis](https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html)
+- [AI Coding Agents in 2026: Coherence Through Orchestration](https://mikemason.ca/writing/ai-coding-agents-jan-2026/) - Mike Mason
+- [Code smells for AI agents](https://stackoverflow.blog/2026/02/04/code-smells-for-ai-agents-q-and-a-with-eno-reyes-of-factory/) - Stack Overflow, Eno Reyes (Factory)
+- [Vibe Coding in 2026](https://dev.to/pockit_tools/vibe-coding-in-2026-the-complete-guide-to-ai-pair-programming-that-actually-works-42de) - DEV Community
+- [Tessl: From Vibe Coding to Viable Code](https://tessl.io/blog/a-year-in-review-from-vibe-coding-to-viable-code/)
+- [Amp vs Claude Code for Infrastructure](https://elite-ai-assisted-coding.dev/p/amp-vs-claude-code-for-infra)
+- [2026 Guide to 15 Coding CLI Tools Compared](https://www.tembo.io/blog/coding-cli-tools-comparison)
+- [OpenCode vs Claude Code](https://www.builder.io/blog/opencode-vs-claude-code)
 
 ---
 
@@ -56,6 +76,7 @@
 
 ### 오픈소스 에이전트
 - [OpenClaw](https://openclaw.ai) (100K+ stars) - 구 Clawdbot/Moltbot, 모델 불가지론
+- [OpenHands](https://openhands.dev) (60K+ stars) - 오픈소스 코딩 에이전트, 87% 버그 당일 해결
 - [SWE-agent](https://github.com/SWE-agent/SWE-agent) (15K+ stars)
 - [Devika](https://github.com/stitionai/devika) (20K+ stars)
 - [GPT Engineer](https://github.com/gpt-engineer-org/gpt-engineer) (55K+ stars)
@@ -79,6 +100,7 @@
 - [awesome-ai-devtools](https://github.com/jamesmurdza/awesome-ai-devtools)
 - [500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects)
 - [Awesome Agentic Patterns](https://github.com/nibzard/awesome-agentic-patterns) (2.8K stars)
+- [awesome-ralph](https://github.com/snwfdhmp/awesome-ralph) - Ralph AI 코딩 기법 큐레이션
 
 ### 패턴 & 방법론
 - [agentic-patterns.com](https://agentic-patterns.com/) - 130+ 에이전트 패턴
@@ -109,6 +131,18 @@
 - [Stack Overflow 2025 Developer Survey - AI](https://survey.stackoverflow.co/2025/ai)
 - [Sonar 2026 State of Code Report](https://www.sonarsource.com/state-of-code-developer-survey-report.pdf)
 - [JetBrains State of Developer Ecosystem 2025](https://blog.jetbrains.com/research/2025/10/state-of-developer-ecosystem-2025/)
+- [Anthropic 2026 Agentic Coding Trends Report](https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf)
+- [Jellyfish 2025 AI Metrics in Review](https://jellyfish.co/blog/2025-ai-metrics-in-review/)
+- [MIT Technology Review - Generative Coding 2026 Breakthrough](https://www.technologyreview.com/2026/01/12/1130027/generative-coding-ai-software-2026-breakthrough-technology)
+
+---
+
+## 벤치마크
+
+| 벤치마크 | 설명 | 링크 |
+|----------|------|------|
+| **SWE-bench** | 실제 GitHub 이슈 기반 코딩 능력 평가 | [swe-bench.com](https://www.swebench.com/) |
+| **Terminal-Bench** | CLI 에이전트 터미널 작업 평가, Stanford/Laude Institute | [tbench.ai](https://www.tbench.ai/) |
 
 ---
 
@@ -138,8 +172,10 @@
 | **Boris Cherny** | Claude Code | [howborisusesclaudecode.com](https://howborisusesclaudecode.com) |
 | **Peter Steinberger** | OpenClaw | [openclaw.ai](https://openclaw.ai) |
 | **Paul Gauthier** | Aider | [aider.chat](https://aider.chat) |
+| **Eno Reyes** | Factory.ai (Droid) | [factory.ai](https://factory.ai) |
 | **François Chollet** | Keras, ARC-AGI | [@fchollet](https://x.com/fchollet) |
 | **Jeremy Howard** | fast.ai | [@jeremyphoward](https://x.com/jeremyphoward) |
+| **Beyang Liu** | Amp Code (Sourcegraph) | [ampcode.com](https://ampcode.com) |
 
 ### Claude Code 팀 (Anthropic)
 
@@ -154,9 +190,13 @@
 |------|--------|------|
 | **Simon Willison** | [simonwillison.net](https://simonwillison.net) | LLM 실용 가이드, llm CLI |
 | **Addy Osmani** | [addyosmani.com](https://addyosmani.com) | AI 코딩 워크플로우, 스펙 작성 |
+| **Kent C. Dodds** | [epicai.pro](https://www.epicai.pro) | MCP 교육, AI 네이티브 개발 |
+| **Guy Podjarny** | [AI Native Dev](https://ainativedev.io) | Tessl 창업자, 스펙 중심 개발 |
+| **Ado Kukic** | [adocomplete.com](https://adocomplete.com) | Anthropic DevRel, Claude 교육 |
 | **Lilian Weng** | [lilianweng.github.io](https://lilianweng.github.io) | 딥러닝 개념 심층 |
 | **Sebastian Raschka** | [Ahead of AI](https://magazine.sebastianraschka.com) | LLM 교육, 책 저자 |
 | **Chip Huyen** | AI Engineering 저자 | ML 엔지니어링 실무 |
+| **Mitchell Hashimoto** | [mitchellh.com](https://mitchellh.com) | HashiCorp 창립자, 하네스 엔지니어링 |
 
 ### 뉴스레터 (정기 구독 추천)
 
@@ -167,6 +207,9 @@
 | [Ahead of AI](https://magazine.sebastianraschka.com/) | 학술+실무 | 격주 |
 | [The Rundown AI](https://www.therundown.ai/) | 일일 AI 뉴스 | 일간 |
 | [AlphaSignal](https://alphasignal.ai/) | ML 연구, GitHub 트렌드 | 주간 |
+| [AI Native Dev](https://ainativedev.io/podcast) | 스펙 중심 AI 개발, 팟캐스트 | 주간 |
+| [The Neuron](https://www.theneuron.ai/) | 55만+ 구독, AI 뉴스 큐레이션 | 일간 |
+| [Last Week in AI](https://lastweekin.ai/) | 주간 AI 뉴스 종합 정리 | 주간 |
 
 ---
 
@@ -212,6 +255,20 @@
 - 큰 코드 블록 생성에는 의존 안 함
 - 결정권은 항상 인간에게
 
+#### Mitchell Hashimoto - "하네스 엔지니어링"
+> "가치를 찾으려면 에이전트를 사용해야 한다. 초기 마찰을 견뎌야 돌파구가 온다."
+
+- 6단계 도입 프레임워크: 챗봇 버리기 → 재현 학습 → 퇴근 전 위임 → 확실한 것만 위임 → 하네스 구축 → 상시 실행
+- AGENTS.md로 에이전트 실수 방지 체계 구축
+- "Don't Draw the Owl": 메가 세션 대신 작고 검증 가능한 단위로
+
+#### Kieran Klaassen - "Compound Engineering"
+> "모든 엔지니어링 작업이 다음 작업을 더 쉽게 만들어야 한다. 계획이 새로운 코드다."
+
+- 80% 계획/리뷰, 20% 실행
+- 14+ 전문 리뷰 에이전트 병렬 검토
+- 개발자 5단계 성장: 수동 → 챗 → 에이전트 → 계획 우선 → 병렬 클라우드
+
 ### 2026년 개발자 역할 변화
 
 | 과거 | 현재 | 미래 |
@@ -241,4 +298,4 @@
 
 ---
 
-*마지막 업데이트: 2026-02-02*
+*마지막 업데이트: 2026-02-10*

@@ -159,7 +159,7 @@ claude mcp remove github
 | **[Perplexity MCP](https://github.com/perplexityai/modelcontextprotocol)** | 실시간 웹 검색 + AI | 공식 |
 | **[Brave Search](https://github.com/anthropics/brave-search-mcp)** | 프라이버시 중심 검색 | 공식 |
 | **[Exa](https://exa.ai)** | 시맨틱 검색 | 커뮤니티 |
-| **[Context7](https://github.com/)** | 라이브러리 문서 검색 | 커뮤니티 |
+| **[Context7](https://context7.com)** | 버전별 라이브러리 문서 검색, API 환각 방지 | `npx add-mcp https://mcp.context7.com/mcp` |
 
 #### 프로젝트 관리
 | 서버 | 용도 | 설치 |
@@ -229,6 +229,17 @@ claude mcp add --transport http figma https://mcp.figma.com/mcp
 | **mcp-awesome.com** | [mcp-awesome.com](https://mcp-awesome.com) | 1,200+ 검증된 서버 |
 | **Docker MCP Toolkit** | [링크](https://www.docker.com/blog/add-mcp-servers-to-claude-code-with-mcp-toolkit/) | 220+ 서버 카탈로그 |
 | **공식 서버** | [github.com/modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers) | Anthropic 공식 |
+
+### MCP Apps (2026-01-26)
+MCP의 인터랙티브 UI 확장. 도구가 대시보드, 폼, 시각화 등 UI 컴포넌트를 반환 가능.
+
+| 지표 | 수치 |
+|------|------|
+| 월간 SDK 다운로드 | 9,700만 |
+| 활성 서버 | 10,000+ |
+| 지원 클라이언트 | Claude, ChatGPT, Cursor, Gemini, VS Code |
+
+> 출처: [MCP Apps 발표](http://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/)
 
 ---
 
@@ -829,4 +840,4 @@ claude mcp add [name] ...
 
 ---
 
-*마지막 업데이트: 2026-01-30*
+*마지막 업데이트: 2026-02-10*

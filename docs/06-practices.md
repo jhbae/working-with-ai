@@ -92,6 +92,15 @@ Step 3: UI 컴포넌트
 | 과도한 컨텍스트 | 50페이지 문서 | 계층적 요약, 토큰 예산 관리 |
 | 인간 검토 생략 | 테스트만으로 부족 | 중요 코드 경로 항상 검토 |
 
+### Addy Osmani의 2026 LLM 워크플로우 업데이트
+
+> 출처: [My LLM Coding Workflow Going Into 2026](https://addyosmani.com/blog/ai-coding-workflow/)
+
+**핵심 변경점:**
+- 계획 우선(Planning-First): 강건한 스펙이 모든 작업의 초석
+- LLM은 방향 제시가 필요한 강력한 페어 프로그래머
+- 품질 게이트 강화: 더 많은 테스트, 모니터링, AI-on-AI 코드 리뷰
+
 ---
 
 ## 2. Anthropic 공식 워크플로우
@@ -175,6 +184,30 @@ claude -p "프롬프트" --output-format stream-json
 - UI 변경 시 `npm run dev`로 브라우저 확인
 - API 변경 시 `curl` 테스트
 ```
+
+### AI 코드 추적 주석
+
+AI 생성 코드의 리뷰 상태와 보안 위험을 명시적으로 표시하는 기법.
+
+```typescript
+// AI-REVIEWED: false — 아직 인간 리뷰 미완료
+function processUserInput(data: string) { ... }
+
+// AI-REVIEWED: true — 2026-02-10 검토 완료
+function validateEmail(email: string) { ... }
+
+// SECURITY-CRITICAL: 인증 로직, AI 수정 금지
+// AI-REVIEWED: true
+function verifyJWT(token: string) { ... }
+```
+
+| 주석 | 용도 |
+|------|------|
+| `AI-REVIEWED: false` | AI 생성 후 인간 리뷰 대기 |
+| `AI-REVIEWED: true` | 인간 검토 완료 |
+| `SECURITY-CRITICAL` | AI가 수정하면 안 되는 민감 영역 |
+
+> 출처: [How to Effectively Write Quality Code with AI](https://heidenstedt.org/posts/2026/how-to-effectively-write-quality-code-with-ai/)
 
 ---
 
@@ -272,10 +305,124 @@ done
 
 ---
 
+## 6. 에이전트 오케스트레이션 전환 (2026)
+
+> 출처: [Anthropic 2026 Agentic Coding Trends Report](https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf)
+
+### 핵심 발견
+
+| 지표 | 수치 |
+|------|------|
+| AI 활용 비율 | 업무의 ~60% |
+| 완전 위임 가능 작업 | 0-20% |
+| Rakuten 사례 | 1,250만줄 코드베이스, 99.9% 정확도, 자율 7시간 |
+
+### 역할 변화
+
+> "엔지니어는 코드를 작성하는 것에서 코드를 작성하는 에이전트를 조율하는 것으로 전환하고 있다. 자신의 전문성은 아키텍처, 시스템 설계, 전략적 결정에 집중."
+
+### Guy Podjarny (Tessl 창업자)의 전망
+> "2027년 말이면, 에이전트와 일하는 개발자는 대부분의 시간 동안 코드를 보지 않을 것이다."
+> — Guy Podjarny, [AI Native Dev](https://ainativedev.io)
+
+---
+
+## 7. Mitchell Hashimoto의 AI 도입 6단계
+
+> 출처: [My AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey)
+> Mitchell Hashimoto - HashiCorp 창립자, Ghostty 개발자
+
+### 6단계 프레임워크
+
+| 단계 | 이름 | 설명 |
+|------|------|------|
+| 1 | **챗봇 버리기** | 웹 챗 인터페이스 대신 에이전트(파일 읽기, 프로그램 실행 가능) 사용 |
+| 2 | **직접 재현** | 수동으로 한 번, 에이전트로 한 번 - 같은 작업을 두 번 수행하며 학습 |
+| 3 | **퇴근 전 30분** | 하루 끝 30분간 에이전트에 리서치/이슈 분류 위임 |
+| 4 | **확실한 것만 위임** | 확신 있는 작업만 백그라운드 에이전트에 맡기고, 깊은 작업에 집중 |
+| 5 | **하네스 엔지니어링** | AGENTS.md로 반복 실수 방지, 검증 스크립트 구축 |
+| 6 | **항상 에이전트 실행** | 대기열 작업에 에이전트 상시 실행, 근무 시간의 10-20% 커버 |
+
+### 핵심 원칙
+
+**"Don't Draw the Owl"**
+> "하나의 메가 세션으로 그림을 완성하려 하지 마라. 명확하고 검증 가능한 작업 단위로 분해하라."
+
+**하네스 엔지니어링**
+- AGENTS.md에 에이전트가 반복하는 실수를 기록
+- 커스텀 검증 스크립트 (스크린샷, 필터된 테스트)
+- 에이전트 알림 끄기 - 컨텍스트 스위칭 비용 방지
+
+> "가치를 찾으려면 에이전트를 사용해야 한다. 초기 마찰을 견뎌야 돌파구가 온다."
+
+---
+
+## 8. Compound Engineering (복리형 개발)
+
+> 출처: [Compound Engineering](https://every.to/guides/compound-engineering)
+> Kieran Klaassen - Cora (AI 이메일 비서) 개발자
+
+### 핵심 개념
+
+> "모든 엔지니어링 작업이 다음 작업을 더 쉽게 만들어야 한다."
+
+기존 개발에서는 코드베이스가 커지면 복잡도가 누적되지만, Compound Engineering에서는 버그 수정, 기능 추가, 패턴 발견을 **학습 가능한 자산**으로 전환한다.
+
+### 4단계 루프
+
+```
+Plan → Work → Review → Compound → (반복)
+```
+
+| 단계 | 설명 | 시간 비율 |
+|------|------|-----------|
+| **Plan** | 요구사항 분석, 코드베이스 조사, 설계 | 40% |
+| **Work** | AI 에이전트가 구현 | 10% |
+| **Review** | 14+ 전문 에이전트가 병렬 검토 | 40% |
+| **Compound** | 패턴을 시스템에 인코딩, 미래 작업 자동화 | 10% |
+
+> **80%가 계획과 리뷰, 20%가 실행** - 기존 개발의 역전
+
+### 리뷰 에이전트 예시
+
+| 역할 | 에이전트 | 검토 대상 |
+|------|----------|-----------|
+| 보안 | security-sentinel | OWASP Top 10 |
+| 성능 | performance-oracle | N+1 쿼리, 캐싱 |
+| 아키텍처 | architecture-strategist | 설계 패턴 |
+| 데이터 | data-integrity-guardian | 데이터 무결성 |
+| 코드 품질 | code-simplicity-reviewer | 단순성 |
+
+### 개발자 성장 5단계
+
+| 단계 | 방식 | 설명 |
+|------|------|------|
+| Stage 0 | 수동 개발 | AI 미사용 |
+| Stage 1 | 챗 보조 | 코드 조각 복사 |
+| Stage 2 | 에이전트 + 라인별 리뷰 | 한 줄씩 검토 |
+| **Stage 3** | **계획 우선, PR 리뷰** | **Compound Engineering 시작** |
+| Stage 4 | 아이디어→PR 자동화 | 단일 머신 |
+| Stage 5 | 클라우드 병렬 실행 | 여러 기능 동시 |
+
+### 버려야 할 8가지 믿음
+
+1. "코드는 손으로 작성해야 한다" → 품질이 중요, 누가 타이핑하느냐는 아님
+2. "모든 라인을 수동 리뷰해야 한다" → 자동화된 리뷰로 대체 가능
+3. "솔루션은 엔지니어에게서만" → AI가 리서치하고 인간이 판단
+4. "코드가 주요 산출물이다" → **계획이 새로운 코드**
+5. "코드 작성이 핵심 업무" → 가치 전달이 핵심, 코드는 수단
+6. "첫 시도가 좋아야 한다" → 95% 쓰레기 예상, 빠른 반복
+7. "코드는 자기 표현이다" → 팀과 사용자의 것
+8. "타이핑이 학습이다" → 리뷰를 통한 이해가 더 중요
+
+> "산출물은 키 입력 횟수가 아니라 해결한 문제로 측정해야 한다."
+
+---
+
 ## 다음 문서
 
 - [references.md](references.md) - 참고 자료
 
 ---
 
-*마지막 업데이트: 2026-01-30*
+*마지막 업데이트: 2026-02-10*
