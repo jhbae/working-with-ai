@@ -1,6 +1,6 @@
 # AI 코딩 도구 종합 비교
 
-> GitHub Stars 1K+ 기준, 2026년 1월 기준
+> GitHub Stars 1K+ 기준, 2026년 3월 기준
 
 ---
 
@@ -10,14 +10,15 @@
 
 | 도구 | Stars | 제공자 | 특징 |
 |------|-------|--------|------|
-| **[Claude Code](https://claude.ai/code)** | 55K+ | Anthropic | Opus 4.6 Agent Teams, 200K 컨텍스트 (1M 베타), MCP 지원 → [상세 가이드](04-claude-code.md) |
+| **[Claude Code](https://claude.ai/code)** | 55K+ | Anthropic | Opus 4.6 Agent Teams, Voice Mode (/voice), Loop Scheduling (/loop), Fast Mode (2.5x), 128K 최대 출력, 1M 컨텍스트 (Max/Team/Enterprise), MCP 지원 → [상세 가이드](04-claude-code.md) |
 | **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** | 90K+ | Google | 1M 컨텍스트, 무료 티어 (60req/min) |
 | **[Codex CLI](https://github.com/openai/codex)** | 15K+ | OpenAI | GPT-4.1, 샌드박스 실행 |
 
 #### Claude Code
-- **강점**: 멀티파일 작업, 실제 200K 컨텍스트, 30% 적은 재작업
+- **강점**: 멀티파일 작업, 200K 컨텍스트 (Max 이상 티어 1M), 128K 출력, Voice Mode, Loop Scheduling, Agent Teams, Fast Mode (2.5x), 30% 적은 재작업
 - **약점**: 비용 ($100-200 Max), 터미널 기반
 - **적합**: 대규모 리팩토링, 복잡한 버그, 설계 수준 변경
+- **시장**: 출시 8개월, 46% "가장 선호" 도구 (출처: 커뮤니티 서베이)
 
 #### Gemini CLI
 - **강점**: Google 생태계 통합, 1M 토큰 컨텍스트, 무료 티어
@@ -33,9 +34,9 @@
 
 | 도구 | 특징 | 가격 |
 |------|------|------|
-| **GitHub Copilot** | 68% 채택률, Agent Mode, MCP 지원 | $10-19/월 |
-| **Cursor** | Copilot fork, 벡터 기반 이해, 체크포인트 | $20/월 |
-| **Windsurf** | Wave 13: 병렬 멀티에이전트, Agent Skills, SWE-1.5 무료 | $15/월 |
+| **GitHub Copilot** | 42% 시장 점유율, 2,000만 사용자, Agent hooks, 멀티모델: GPT-4o/GPT-5.1-Codex-Max/Claude Opus 4.5/Gemini 2.0 Flash | $10-19/월 |
+| **Cursor** | v2.6 (2026-03-03): 에이전트 채팅 내 인터랙티브 UI, Background Agents, BugBot, $500M+ ARR | $20/월 |
+| **Windsurf** | LogRocket AI Dev Tool 1위 (2026-02), Cascade Engine, 멀티모델: Claude 3.7 Sonnet/GPT-4.5 beta/GPT-5.1/Gemini 3 Pro | $15/월 |
 | **[Warp](https://warp.dev)** | AI 터미널, 멀티 에이전트, Full Terminal Use | 무료 + Pro |
 | **[Amp Code](https://ampcode.com)** | Sourcegraph, 멀티모델 자동 라우팅, 서브에이전트 병렬, Skills 호환 | $10/일 무료 + 종량제 |
 | **[Copilot Workspace](https://githubnext.com/projects/copilot-workspace)** | Agents HQ: Claude+Codex 병렬 실행, 이슈→PR 자동화 | Pro+/Enterprise |
@@ -170,10 +171,10 @@
 
 | 도구 | 특징 |
 |------|------|
-| **Amazon Q Developer** | AWS 통합, 코드 리뷰, Java/.NET 업그레이드 |
+| **Amazon Q Developer** | AWS 통합, 코드 리뷰, Java/.NET 업그레이드, $19/사용자 Pro, 코드 수락률 37-50%, 15+ 언어, AWS $260M 절감/4,500 개발자-년 절약 (2024) |
 | **Augment Code** | 전체 코드베이스 이해, Context Engine |
 | **Google Antigravity** | Windsurf 인수 기반, 무료 AI IDE 프리뷰 (2026-01-08), 병렬 에이전트 오케스트레이션 |
-| **[Devin](https://cognition.ai)** | Cognition AI, 자율 코딩 에이전트, Devin Review(PR 리뷰), Infosys 파트너십 |
+| **[Devin](https://cognition.ai)** | Cognition AI, v2.2 (2026-02): Computer Use (Linux 데스크톱), 자가검증 (화면 녹화), Devin Review (PR 리뷰), PR 머지율 34%→67%, Legacy 코드 현대화 (COBOL/Fortran→Rust/Go/Python), Infosys 파트너십 |
 | **[Factory.ai](https://factory.ai)** | "Droid" 에이전트, SWE-Bench 84.8%, Terminal-Bench SOTA, 이슈→PR 자동화 |
 
 ---
@@ -196,4 +197,4 @@
 - [04-claude-code.md](04-claude-code.md) - Claude Code 상세
 - [05-parallel.md](05-parallel.md) - 오케스트레이터 상세
 
-*마지막 업데이트: 2026-02-10*
+*마지막 업데이트: 2026-03-25*

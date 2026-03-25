@@ -11,6 +11,8 @@
 - [Claude Code Docs - Hooks](https://code.claude.com/docs/en/hooks-guide)
 - [Claude Code Docs - MCP](https://code.claude.com/docs/en/mcp)
 - [Claude Opus 4.6 Announcement](https://www.anthropic.com/news/claude-opus-4-6)
+- [Claude Code Voice Mode](https://support.claude.com/en/articles/12138966-release-notes) - 음성 모드, 루프 스케줄링
+- [Claude Code Agent Teams](https://claudefa.st/blog/guide/changelog) - 멀티에이전트 오케스트레이션
 
 ### 기타 공식
 - [OpenCode](https://opencode.ai/)
@@ -18,6 +20,11 @@
 - [GitHub Agents HQ](https://github.blog/news-insights/company-news/pick-your-agent-use-claude-and-codex-on-agent-hq/)
 - [moai-adk](https://github.com/modu-ai/moai-adk)
 - [AGENTS.md Standard](https://agents.md/) - 60K+ 프로젝트 채택, 에이전트 가이드 표준
+- [Amazon Q Developer](https://aws.amazon.com/q/developer/) - AWS AI 코딩 도구
+- [Jules (Google)](https://jules.google) - Google 자율 코딩 에이전트
+- [Devin 2.2](https://cognition.ai/blog/introducing-devin-2-2) - Computer Use, 자가검증
+- [Cursor 2.6 Changelog](https://cursor.com/changelog) - Background Agents, BugBot
+- [MCP 2026 Roadmap](http://blog.modelcontextprotocol.io/posts/2026-mcp-roadmap/) - 엔터프라이즈 준비
 - [Agentic AI Foundation](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation) - Linux Foundation
 - [MCP Apps](http://blog.modelcontextprotocol.io/posts/2026-01-26-mcp-apps/) - MCP 인터랙티브 UI 확장
 - [Tessl Framework](https://tessl.io) - 스펙 중심 개발 프레임워크
@@ -36,6 +43,8 @@
 - [My AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey) - Mitchell Hashimoto (HashiCorp 창립자), AI 도입 6단계
 - [Compound Engineering](https://every.to/guides/compound-engineering) - Kieran Klaassen, 복리형 AI 네이티브 개발
 - [How to Effectively Write Quality Code with AI](https://heidenstedt.org/posts/2026/how-to-effectively-write-quality-code-with-ai/) - AI 코드 리뷰 추적 주석 기법
+- [Effective Context Engineering for AI Agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) - Anthropic, 컨텍스트 엔지니어링 가이드
+- [Eight Trends Defining How Software Gets Built in 2026](https://claude.com/blog/eight-trends-defining-how-software-gets-built-in-2026) - Claude 블로그
 
 ### CLAUDE.md 작성
 - [Writing a good CLAUDE.md](https://www.humanlayer.dev/blog/writing-a-good-claude-md)
@@ -53,6 +62,8 @@
 - [Amp vs Claude Code for Infrastructure](https://elite-ai-assisted-coding.dev/p/amp-vs-claude-code-for-infra)
 - [2026 Guide to 15 Coding CLI Tools Compared](https://www.tembo.io/blog/coding-cli-tools-comparison)
 - [OpenCode vs Claude Code](https://www.builder.io/blog/opencode-vs-claude-code)
+- [Claude Code vs Cursor vs Copilot 2026 Showdown](https://dev.to/alexcloudstar/claude-code-vs-cursor-vs-github-copilot-the-2026-ai-coding-tool-showdown-53n4) - DEV Community
+- [AI Tooling for Software Engineers in 2026](https://newsletter.pragmaticengineer.com/p/ai-tooling-2026) - Pragmatic Engineer
 
 ---
 
@@ -134,6 +145,11 @@
 - [Anthropic 2026 Agentic Coding Trends Report](https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf)
 - [Jellyfish 2025 AI Metrics in Review](https://jellyfish.co/blog/2025-ai-metrics-in-review/)
 - [MIT Technology Review - Generative Coding 2026 Breakthrough](https://www.technologyreview.com/2026/01/12/1130027/generative-coding-ai-software-2026-breakthrough-technology)
+- [AI Coding Statistics 2026](https://www.getpanto.ai/blog/ai-coding-assistant-statistics) - Panto AI
+- [AI Generated Code Statistics 2026](https://www.netcorpsoftwaredevelopment.com/blog/ai-generated-code-statistics)
+- [AI Coding Tools Adoption Rates 2026](https://blog.exceeds.ai/ai-coding-tools-adoption-rates/) - Exceeds AI
+- [METR: AI Developer Productivity Study](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) - 숙련 개발자 AI 생산성 역설
+- [Veracode GenAI Code Security Report](https://www.veracode.com/resources/analyst-reports/2025-genai-code-security-report/) - AI 코드 보안 취약점
 
 ---
 
@@ -143,6 +159,16 @@
 |----------|------|------|
 | **SWE-bench** | 실제 GitHub 이슈 기반 코딩 능력 평가 | [swe-bench.com](https://www.swebench.com/) |
 | **Terminal-Bench** | CLI 에이전트 터미널 작업 평가, Stanford/Laude Institute | [tbench.ai](https://www.tbench.ai/) |
+| **Aider Polyglot** | 다양한 언어에서의 AI 코딩 에이전트 편집 능력 평가 | [aider.chat/leaderboards](https://aider.chat/docs/leaderboards/) |
+
+---
+
+## 보안 & 품질 리소스
+
+- [2025 was Speed, 2026 will be Quality](https://www.coderabbit.ai/blog/2025-was-the-year-of-ai-speed-2026-will-be-the-year-of-ai-quality) - CodeRabbit
+- [Understanding Security Risks in AI-Generated Code](https://cloudsecurityalliance.org/blog/2025/07/09/understanding-security-risks-in-ai-generated-code) - CSA
+- [AI-Generated Code Quality Metrics 2026](https://www.secondtalent.com/resources/ai-generated-code-quality-metrics-and-statistics-for-2026/) - Second Talent
+- [The AI Productivity Paradox](https://www.faros.ai/blog/ai-software-engineering) - Faros AI
 
 ---
 
@@ -176,6 +202,7 @@
 | **François Chollet** | Keras, ARC-AGI | [@fchollet](https://x.com/fchollet) |
 | **Jeremy Howard** | fast.ai | [@jeremyphoward](https://x.com/jeremyphoward) |
 | **Beyang Liu** | Amp Code (Sourcegraph) | [ampcode.com](https://ampcode.com) |
+| **Scott Wu** | Devin (Cognition) | [cognition.ai](https://cognition.ai) |
 
 ### Claude Code 팀 (Anthropic)
 
@@ -210,6 +237,7 @@
 | [AI Native Dev](https://ainativedev.io/podcast) | 스펙 중심 AI 개발, 팟캐스트 | 주간 |
 | [The Neuron](https://www.theneuron.ai/) | 55만+ 구독, AI 뉴스 큐레이션 | 일간 |
 | [Last Week in AI](https://lastweekin.ai/) | 주간 AI 뉴스 종합 정리 | 주간 |
+| [Pragmatic Engineer](https://newsletter.pragmaticengineer.com/) | 엔지니어링 심층, AI 도구 분석 | 주간 |
 
 ---
 
@@ -298,4 +326,4 @@
 
 ---
 
-*마지막 업데이트: 2026-02-10*
+*마지막 업데이트: 2026-03-25*

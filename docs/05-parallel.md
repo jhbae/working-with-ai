@@ -24,6 +24,21 @@ cd ../feature-api && claude
 > /parallel "테스트 작성" "문서 업데이트" "린팅 수정"
 ```
 
+### Claude Code Agent Teams (2026-02)
+
+공식 멀티에이전트 오케스트레이션. Opus 4.6 기반 TeammateTool로 자동 작업 분배.
+
+```bash
+# Agent Teams는 Claude Code 내에서 자동으로 활성화
+# 복잡한 작업 시 전문 에이전트로 자동 분해 및 병렬 실행
+```
+
+**특징:**
+- 외부 도구 없이 네이티브 멀티에이전트 지원
+- 자동 태스크 분해 및 에이전트 간 통신
+- 공유 태스크 리스트로 진행 상황 추적
+- Git worktree 기반 격리 실행 가능
+
 ### Boris Cherny의 병렬 워크플로우
 
 > 5개 병렬 세션 + claude.ai에서 5-10개 추가
@@ -61,6 +76,7 @@ cd ../feature-api && claude
 | **[Claude-Squad](https://github.com/smtg-ai/claude-squad)** | 5.6K | 여러 에이전트 동시 관리 |
 | **[Conductor](https://conductor.build)** | - | macOS 앱, Claude Code+Codex 병렬, Git Worktree 자동화 |
 | **[Amp Code](https://ampcode.com)** | - | 멀티모델 자동 라우팅 (Claude+GPT+Gemini), 서브에이전트 병렬 |
+| **[JetBrains Agent Platform](https://jetbrains.com)** | - | Q2 2026 EAP, 멀티에이전트 이슈 조사, IDE/CLI/파이프라인 통합 |
 
 ---
 
@@ -225,11 +241,12 @@ npm install -g vibe-tools
 | 방법 | 자동 분배 | 멀티 모델 | 설정 난이도 | 실사용 검증 |
 |------|-----------|-----------|-------------|-------------|
 | **Amp Code** | O (서브에이전트) | O (Claude+GPT+Gemini) | 낮음 | 검증됨 |
-| **Claude Code Agent Teams** | O (Opus 4.6 내장) | X (Claude만) | 없음 | 검증됨 |
+| **Claude Code Agent Teams** | O (Claude Opus 4.6 내장) | O (Claude Opus 4.6 내장) | 없음 | 검증됨 |
 | **OpenRouter + Claude Code** | X | O (400+ 모델) | 낮음 | 검증됨 |
 | **OpenCode** | X (수동) | O (75+ 제공자) | 중간 | 검증됨 |
 | **Claude Squad** | X (수동) | O (다른 에이전트 실행) | 낮음 | 검증됨 |
 | **Claude-Flow** | O (이론상) | O (이론상) | 높음 | 미검증 |
+| **JetBrains Agent Platform** | O (멀티에이전트) | O (다양한 모델) | 중간 | EAP (Q2 2026) |
 
 ### OpenRouter 활용법
 
@@ -258,6 +275,16 @@ claude
 | 복잡한 시스템 변경 | 순차 작업 권장 |
 | 팀 협업 | Claude-Squad |
 
+### 에이전트 시장 현황 (2026)
+
+| 지표 | 수치 |
+|------|------|
+| 에이전트 시장 규모 | $7.8B (2026) → $52B (2030 전망) |
+| 멀티에이전트 문의 증가 | Gartner 1,445% 증가 (Q1 2024 → Q2 2025) |
+| 기업 앱 AI 에이전트 내장 | 2026년 말 40% 전망 (2025년 <5%) |
+| 주간 AI 도구 사용 개발자 | 95% |
+| AI가 50%+ 업무 담당 | 75% 개발자 |
+
 ### 비용 고려
 
 | 방식 | 비용 영향 |
@@ -280,4 +307,4 @@ claude
 
 ---
 
-*마지막 업데이트: 2026-02-10*
+*마지막 업데이트: 2026-03-25*

@@ -34,6 +34,8 @@ claude
 > /init    # CLAUDE.md 자동 생성
 ```
 
+> **2026 현황**: 출시 8개월 만에 46% "가장 선호" 도구 선정 (Cursor 19%, Copilot 9%). v2.1.76 기준 (2026-03).
+
 ### 주요 슬래시 명령어
 | 명령어 | 설명 |
 |--------|------|
@@ -43,6 +45,9 @@ claude
 | `/clear` | 대화 초기화 |
 | `/help` | 도움말 |
 | `#` | CLAUDE.md에 메모 추가 |
+| `/voice` | 음성 모드 (push-to-talk) |
+| `/loop` | 루프 스케줄링 (Cron 스타일) |
+| `/fast` | 빠른 모드 토글 (2.5x 속도) |
 
 ---
 
@@ -623,6 +628,58 @@ claude
 | **awesome-claude-code** | [GitHub](https://github.com/hesreallyhim/awesome-claude-code) | 21K+ 커뮤니티 큐레이션 |
 | **ccplugins marketplace** | [GitHub](https://github.com/ccplugins/marketplace) | 243개 검증된 플러그인 |
 
+### 6.10 2026년 주요 신기능
+
+#### Voice Mode (음성 모드, 2026-03)
+```bash
+claude
+> /voice    # 음성 모드 진입
+# 스페이스바로 push-to-talk
+```
+
+**특징:**
+- 스페이스바 push-to-talk 방식
+- 타이핑 대신 자연어 음성으로 의도 전달
+- 코드 탐색, 디버깅 지시에 유용
+
+#### Loop Scheduling (루프 스케줄링, 2026-03)
+```bash
+claude
+> /loop    # 루프 스케줄러 설정
+```
+
+**특징:**
+- 경량 Cron 스타일 작업 스케줄러
+- 일회성 도우미에서 지속적 백그라운드 워커로 전환
+- 정기 작업 자동화: 테스트 실행, 코드 검사, 리포트 생성
+
+#### Agent Teams (에이전트 팀, 2026-02)
+```bash
+# Claude Code 내에서 자동으로 멀티에이전트 조율
+# TeammateTool로 전문 에이전트 분산 실행
+```
+
+**특징:**
+- 공식 멀티에이전트 오케스트레이션 (Opus 4.6 기반)
+- TeammateTool로 에이전트 간 작업 분배 및 통신
+- 자동 태스크 분해 및 병렬 실행
+- 외부 오케스트레이터 없이 네이티브 지원
+
+#### Fast Mode (빠른 모드)
+```bash
+claude
+> /fast    # 빠른 모드 토글
+```
+
+**특징:**
+- 동일 Opus 4.6 모델, 2.5x 빠른 출력
+- 프리미엄 가격 ($30/$150 per MTok)
+- 간단한 작업, 빠른 반복에 적합
+
+#### Extended Output (확장 출력)
+- Opus 4.6: 최대 128K 출력 토큰
+- Max/Team/Enterprise: 1M 컨텍스트 윈도우
+
 ---
 
 ## 7. 실용적 팁
@@ -647,7 +704,7 @@ Plan 모드 → 계획 정제 → 자동 수락 모드 → 단일 패스 실행
 ```
 > Claude가 대부분 1-shot으로 해결
 
-**3. Opus 4.5 + Thinking 고정**
+**3. Opus 4.6 + Thinking 고정**
 > "더 크고 느리지만, 지시를 덜 해도 되고 도구 사용이 좋아서 결국 더 빠름"
 
 **4. 팀 공유 CLAUDE.md**
@@ -718,6 +775,8 @@ TAB 키로 thinking mode on/off 토글
 | think, think hard, ultrathink | TAB으로 토글 |
 | 키워드로 사고 깊이 조절 | 기본 max 토큰 |
 
+> **참고**: Thinking mode UI가 변경된 것이지, 기능 자체가 제거된 것은 아님. 키워드 방식에서 TAB 토글 방식으로 전환.
+
 #### 컨텍스트 제한 시
 ```
 /compact    # 컨텍스트 압축
@@ -748,7 +807,7 @@ cs  # 여러 에이전트 동시 관리
 |-----------|-----------|--------------|
 | 간단한 수정 | Haiku | - |
 | 일반 개발 | Sonnet | - |
-| 복잡한 설계 | Opus | **Opus 4.5 고정** |
+| 복잡한 설계 | Opus | **Opus 4.6 고정** |
 
 > Boris: "Opus가 결국 더 빠름" (지시 횟수 감소)
 
@@ -823,7 +882,7 @@ claude mcp add [name] ...
 - [Anthropic Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices)
 
 ### 가이드
-- [How Boris Uses Claude Code](https://howborisusesclaudecode.com/) - 창시자의 워크플로우 ⭐
+- [How Boris Uses Claude Code](https://howborisusesclaudecode.com/) - 창시자의 워크플로우 (필독)
 - [Writing a good CLAUDE.md](https://www.humanlayer.dev/blog/writing-a-good-claude-md)
 - [Complete Guide to CLAUDE.md](https://www.builder.io/blog/claude-md-guide)
 
@@ -840,4 +899,4 @@ claude mcp add [name] ...
 
 ---
 
-*마지막 업데이트: 2026-02-10*
+*마지막 업데이트: 2026-03-25*
